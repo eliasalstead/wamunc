@@ -1,12 +1,12 @@
 .comm-group {
-    height: 350px;
+    height: 450px;
     text-align: center;
     border: 1px solid black;
     background-color: #c0a782;
 }
 
 .comms {
-    height: 350px;
+    height: 450px;
     text-align: left;
     border: 1px solid black;
     background-color: #add8e6;
@@ -21,7 +21,7 @@
 
 .comms-txt {
     width: 100%;
-    height: 100%;
+    height: 400px;
     position: relative;
     display: flex;
     align-items: center;

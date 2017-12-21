@@ -86,13 +86,13 @@ nav>.row {
     -moz-box-shadow: none;
     box-shadow: none;
     display: none;
-    opacity: 0;
+  /*  opacity: 0; */
     visibility: hidden;
-    -webkit-transition: opacity 0.2s;
+  /*  -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     -ms-transition: opacity 0.2s;
     -o-transition: opacity 0.2s;
-    -transition: 0.2s;
+    -transition: 0.2s;*/
 }
 
 .main-nav>ul>li>ul>li>a {
@@ -113,9 +113,23 @@ nav>.row {
 
 .main-nav ul li ul:hover, .main-nav ul li:hover ul {
     display: block;
-    opacity: 0.7; 
     visibility: visible;
+    background-color: rgba(39,64,139,0.7);
 }
+
+/*
+@media screen and (max-width: 760px) {
+    .main-nav>ul, .main-nav>ul>li>ul {
+        display: none;
+    }
+    .main-nav>ul>li, .main-nav>ul>li>ul>li {
+        width: 100%;
+    }
+    .show-menu {
+        display: block;
+    }
+}
+*/
 
 .vid-container {
     height: 1000px;
@@ -125,10 +139,10 @@ nav>.row {
 }
 
 .welcome-box {
-    color: #fff; 
+    color: #000;
     position: absolute;
     top: 50%;
-    left: 65%;
+    left: 55%;
     text-align: right;
 }
 
@@ -213,12 +227,11 @@ footer {
     position: relative;
     float: right;
     margin-top: 275px;
-    margin-right: 10%; 
+    margin-right: 10%;
     background-color: inherit;
 }
 
-.page-title h1 {
-    color: white;
-    font-size: 120px;
+.page-title h2 {
+    color: #fff;
+    font-size: 80px;
 }
-

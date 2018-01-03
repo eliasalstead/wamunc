@@ -1,0 +1,76 @@
+.prgm-map-container {
+    padding: 0;
+}
+
+#prgm-map {
+    width: 80%;
+    height: 800px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: 10%;
+}
+
+.financial-table {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 26px;
+}
+
+.financial-table th {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.financial-table th, td {
+  /*  border: 1px solid #c0a782; */
+    text-align: center;
+    padding: 10px;
+}
+
+.financial-table tr {
+    height: 100px;
+}
+
+.financial-table tr:nth-child(even) {
+    background-color: rgb(39,64,139);
+}
+
+.financial-table tr:nth-child(odd) {
+    background-color: #c0a782;
+}
+
+.schedule-container {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    font-size: 26px;
+}
+
+.schedule-container th {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.schedule-container th, td {
+/*    border: 1px solid black; */
+    text-align: left;
+    padding: 30px;
+}
+
+.schedule-container td:nth-child(odd) {
+    width: 25%;
+    text-align: center;
+}
+
+.schedule-container td:nth-child(even) {
+    background-color: rgb(39,64,139);
+    border-radius: 30px;
+    color: #fff;
+}
+
+.schedule-container tr {
+    height: 100px;
+}

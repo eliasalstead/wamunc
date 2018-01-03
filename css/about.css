@@ -60,8 +60,8 @@
         height: 450px;
     }
 }
-
-.sec-bio {
+/*
+.sec-details {
     width: 100%;
     position: absolute;
     visibility: hidden;
@@ -71,7 +71,7 @@
 img:hover .sec-bio {
     visibility: visible;
 }
-
+*/
 /*
 .pic-wrap {
     position: relative;
@@ -94,7 +94,7 @@ img:hover .sec-bio {
 }
 */
 
-.sec-bio {
+.sec-details {
     position: absolute;
     top: 0;
     left: 0;
@@ -107,12 +107,12 @@ img:hover .sec-bio {
     visibility: hidden;
 }
 
-.sec-bio p {
+.sec-details p {
     margin: 10px;
     text-indent: 2.25em;
 }
 
-.sec-member:hover .sec-bio {
+.sec-member:hover .sec-details {
     visibility: visible;
     background-color: rgba(192,198,191,0.6);
 }

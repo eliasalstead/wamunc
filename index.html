@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/home.css" />
+	<link rel="stylesheet" type="text/css" href="css/about.css" />
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css" />
  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -15,78 +17,100 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-    <nav class="container-fluid">
-		<div class="row">
-	    	<div class="image-header">
-				<div id="crest">
-		    		<a href="index.html"><img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png"></a>
-				</div>
+
+    <nav>
+		<div class="mobile-header">
+			<div class="logo-mobile">
+				<a href="index.html">
+					<img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png" />
+				</a>
 			</div>
-	    	<div class="main-nav">
-				<ul>
-		    		<li>
-						Sponsorship
-						<ul>
-			    			<li><a href="sponsorship/why.html" style="padding-top: 10px;">Why</a></li>
-			    			<li><a href="sponsorship/donations.html">Donations</a></li>
-			    			<li><a href="sponsorship/alumni.html">Alumni Relations</a></li>
-						</ul>
-		    		</li>
-		    		<li>
-						Delegate Resources
-						<ul>
-			    			<li><a href="delegate/position-papers.html" style="padding-top: 10px;">Position Papers</a></li>
-			    			<li><a href="delegate/crisis.html">Crisis How-To</a></li>
-			    			<li><a href="delegate/woodley-park.html">Woodley Park</a></li>
-						</ul>
-		    		</li>
-		    		<li>
-						Committees
-						<ul>
-			    			<li><a href="committees/committees.html" style="padding-top: 10px;">Overview</a></li>
-			    			<li><a href="committees/committees.html#international">International Bodies</a></li>
-			    			<li><a href="committees/committees.html#regional">Regional Bodies and Councils</a></li>
-							<li><a href="committees/committees.html#historical">Historical and Specialized Bodies</a></li>
-			    			<li><a href="committees/committees.html#crisis" style="padding-bottom: 10px;">Crisis Committees</a></li>
-						</ul>
-		    		</li>
-		    		<li>
-						Conference
-						<ul>
-			    			<li><a href="conference/registration.html" style="padding-top: 10px;">Registration</a></li>
-			    			<li><a href="conference/dates.html">Important Dates</a></li>
-			    			<li><a href="conference/financial.html">Financial Information</a></li>
-			    			<li><a href="conference/schedule.html">Conference Schedule</a></li>
-			    			<li><a href="conference/hotel.html">Hotel</a></li>
-			    			<li><a href="conference/programming.html">Programming</a></li>
-			    			<li><a href="conference/keynote-speakers.html">Keynote Speakers</a></li>
-			    			<li><a href="conference/forms.html" style="padding-bottom: 10px;">Forms</a></li>
-						</ul>
-		    		</li>
-		    		<li>
-						About
-						<ul>
-			    			<li><a href="about/why-wamunc.html" style="padding-top: 10px;">Why WAMUNC</a></li>
-			    			<li><a href="about/meet-the-secretariat.html">Meet the Secretariat</a></li>
-			    			<li><a href="about/ias.html">International Affairs Society</a></li>
-			    			<li><a href="about/charity.html">Charity</a></li>
-			    			<li><a href="about/press-releases.html" style="padding-bottom: 10px;">Press Releases</a></li>
-						</ul>
-		    		</li>
-				</ul>
-	    	</div>
+			<div class="mobile-dropdown">
+				<label for="drop" class="toggle">&#9776;</label>
+				<input type="checkbox" id="drop" />
+			</div>
 		</div>
+
+		<div class="image-header">
+			<div class="logo" id="crest">
+				<a href="index.html">
+					<img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png" />
+				</a>
+			</div>
+		</div>
+
+		<ul class="main-nav">
+			<li>
+				<a href="javascript:void(0)">Sponsorship</a>
+				<label for="drop-1" class="toggle">Sponsorship</label>
+				<input type="checkbox" id="drop-1"/>
+				<ul>
+					<li><a href="sponsorship/why.html" style="padding-top: 10px;">Why</a></li>
+					<li><a href="sponsorship/donations.html">Donations</a></li>
+					<li><a href="sponsorship/alumni.html">Alumni Relations</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Delegate Resources</a>
+				<label for="drop-2" class="toggle">Delegate Resources</label>
+				<input type="checkbox" id="drop-2"/>
+				<ul>
+					<li><a href="delegate/position-papers.html" style="padding-top: 10px;">Position Papers</a></li>
+					<li><a href="delegate/crisis.html">Crisis How-To</a></li>
+					<li><a href="delegate/woodley-park.html">Woodley Park</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Committees</a>
+				<label for="drop-3" class="toggle">Committees</label>
+				<input type="checkbox" id="drop-3"/>
+				<ul>
+					<li><a href="committees/committees.html" style="padding-top: 10px;">Overview</a></li>
+					<li><a href="committees/committees.html#international">International Bodies</a></li>
+					<li><a href="committees/committees.html#regional">Regional Bodies and Councils</a></li>
+					<li><a href="committees/committees.html#historical">Historical and Specialized Bodies</a></li>
+					<li><a href="committees/committees.html#crisis" style="padding-bottom: 10px;">Crisis Committees</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Conference</a>
+				<label for="drop-4" class="toggle">Conference</label>
+				<input type="checkbox" id="drop-4"/>
+				<ul>
+					<li><a href="conference/registration.html" style="padding-top: 10px;">Registration</a></li>
+					<li><a href="conference/dates.html">Important Dates</a></li>
+					<li><a href="conference/financial.html">Financial Information</a></li>
+					<li><a href="conference/schedule.html">Conference Schedule</a></li>
+					<li><a href="conference/hotel.html">Hotel</a></li>
+					<li><a href="conference/programming.html">Programming</a></li>
+					<li><a href="conference/keynote-speakers.html">Keynote Speakers</a></li>
+					<li><a href="conference/forms.html" style="padding-bottom: 10px;">Forms</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">About</a>
+				<label for="drop-5" class="toggle">About</label>
+				<input type="checkbox" id="drop-5"/>
+				<ul>
+					<li><a href="about/why-wamunc.html" style="padding-top: 10px;">Why WAMUNC</a></li>
+					<li><a href="about/meet-the-secretariat.html">Meet the Secretariat</a></li>
+					<li><a href="about/ias.html">International Affairs Society</a></li>
+					<li><a href="about/charity.html">Charity</a></li>
+					<li><a href="about/press-releases.html" style="padding-bottom: 10px;">Press Releases</a></li>
+				</ul>
+			</li>
+		</ul>
     </nav>
 
     <section class="vid-container">
-<!--	<video loop muted autoplay class="bg-vid">
-	    <source src="hoc.mp4" type="video/mp4">
-	</video>-->
-	<div class="welcome-box">	
-	    <h4 style="font-size: 30px;">March 1-4, 2018</h4>
-            <h1 style="font-size: 100px; margin-bottom: 20px;">WAMUNC XX</h1>
-	    <a class="btn btn-primary" style="font-size: 40px;" href="https://portal.wamunc.com" target="_blank">Register</a>
-	</div>
+	<!--	<video loop muted autoplay class="bg-vid">
+	    	<source src="hoc.mp4" type="video/mp4">
+		</video>  -->
+		<div class="welcome-box">
+			<h4>March 1-4, 2018</h4>
+			<h1>WAMUNC XX</h1>
+		    <a class="btn btn-primary" href="https://portal.wamunc.com" target="_blank">Register</a>
+		</div>
     </section>
 
     <section class="container-fluid sec-gen-letter-container">
@@ -106,28 +130,123 @@
 	</div>
     </section>
 
-<!--	<section class="container-fluid" id="news-feed-container">
-		<div id="news-feed-box"></div>
-	</section> -->
+	<section id="news-feed-container">
+		<div id="news-feed-box">
+			<iframe id="top" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwamunc%2Fposts%2F1646968988703064%3A0&width=500" width="500" height="653" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwamunc%2Fposts%2F1644202995646330%3A0&width=500" width="500" height="762" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			<iframe id="bottom" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwamunc%2Fposts%2F1636871316379498%3A0&width=500" width="500" height="769" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+		</div>
+	</section>
 
     <section class="container-fluid map-container">
         <div id="map"></div>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWhXro3wcm4BDFkArUWZ3r5eUbwEPCdZA&callback=initMap"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWhXro3wcm4BDFkArUWZ3r5eUbwEPCdZA&callback=initMap"></script>
     </section>
 
     <footer class="container-fluid">
-	<div class="col-sm-8">
-	    <p id="copyright">&copy;WAMUNC XX</p>
-	</div>
-	<div class="col-sm-4">
-	<div class="social-media-icons">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/facebook.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/twitter.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/instagram.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/linked-in.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/youtube.png">
-	</div>
-	</div>
+		<div id="copyright">
+	    	<p>&copy;WAMUNC XX</p>
+		</div>
+		<div class="social-media-icons">
+			<div class="icon-container">
+				<a href="https://www.facebook.com/wamunc" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/facebook.png" />
+				</a>
+				<a href="https://twitter.com/wamunc" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/twitter.png" />
+				</a>
+				<a href="https://www.instagram.com/wamunc/" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/instagram.png" />
+				</a>
+				<a href="https://www.linkedin.com/company/washington-area-model-united-nations-conference-wamunc-" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/linked-in.png" />
+				</a>
+				<a href="https://www.youtube.com/channel/UCdF5FhNw2SDd6Jw_HVilZDw" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/youtube.png" />
+				</a>
+			</div>
+		</div>
     </footer>
+
+	<script>
+
+		function newsFeedHeight() {
+            var sec_letter_height = document.getElementsByClassName('sec-gen-letter-container')[0].offsetHeight;
+            sec_letter_height = sec_letter_height.toString();
+            sec_letter_height += 'px';
+            document.getElementById('news-feed-container').style.height = sec_letter_height;
+            document.getElementById('news-feed-container').style.marginBottom = '60px';
+        }
+
+        newsFeedHeight();
+
+		window.addEventListener('resize', newsFeedHeight);
+
+        $('#drop').click(function() {
+            var checked = $('#drop').is(':checked');
+
+            if (checked) {
+                $('.main-nav')[0].style.display = 'block';
+            }
+            else {
+                $('.main-nav')[0].style.display = '';
+            }
+        });
+
+        $('input:not(:first)').each(function() {
+            $( this ).click(function () {
+                var checked = $(this).is(':checked');
+
+                if (checked) {
+                    $(this).prev().css({'background-color': 'rgba(39,64,139,0.7)'});
+                }
+                else {
+                    $(this).prev().css({'background-color': ''});
+                }
+            });
+        });
+
+		function centerWelcome() {
+			var vidContainer = document.getElementsByClassName('vid-container')[0];
+			var welcomeBox = document.getElementsByClassName('welcome-box')[0];
+
+			var marginSide = vidContainer.offsetWidth - welcomeBox.offsetWidth;
+			marginSide /= 2;
+			marginSide = marginSide.toString();
+			marginSide += 'px';
+			welcomeBox.style.marginLeft = marginSide;
+
+			var marginTop = vidContainer.offsetHeight - welcomeBox.offsetHeight;
+			marginTop /= 2;
+			marginTop = marginTop.toString();
+			marginTop += 'px';
+			welcomeBox.style.marginTop = marginTop;
+		}
+
+		centerWelcome();
+
+		window.addEventListener('resize', centerWelcome);
+
+		function centerIcons() {
+		    var iconFooter = document.getElementsByClassName('social-media-icons')[0];
+		    var iconContainer = document.getElementsByClassName('icon-container')[0];
+
+		    var marginSide = iconFooter.offsetWidth - iconContainer.offsetWidth;
+			marginSide /= 2;
+			marginSide = marginSide.toString();
+			marginSide += 'px';
+			iconContainer.style.marginLeft = marginSide;
+
+			var marginTop = iconFooter.offsetHeight - iconContainer.offsetHeight;
+			marginTop /= 2;
+			marginTop = marginTop.toString();
+			marginTop += 'px';
+			iconContainer.style.marginTop = marginTop;
+		}
+
+		centerIcons();
+
+		window.addEventListener('resize', centerIcons);
+	</script>
 </body>
 </html>

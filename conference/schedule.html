@@ -4,7 +4,7 @@
     <title>Conference Schedule</title>
 
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/home.css" />
@@ -85,106 +85,48 @@
 		</div>
 	</section>
 
-	<section class="content-container">
-		<table class="schedule-container">
-			<tr>
-				<th colspan="2">Thursday, March 1</th>
-			</tr>
-			<tr>
-				<td>12:00PM - 6:00PM</td>
-				<td>Delegation Registration</td>
-			</tr>
-			<tr>
-				<td>4:00PM - 5:00PM</td>
-				<td>Workshops</td>
-			</tr>
-			<tr>
-				<td>7:00PM - 8:00PM</td>
-				<td>Opening Ceremonies</td>
-			</tr>
-			<tr>
-				<td>8:00PM - 11:00PM</td>
-				<td>Committee Session I</td>
-			</tr>
-			<tr>
-				<td>8:30PM - 11:00PM</td>
-				<td>Committee Session I (General Assemblies)</td>
-			</tr>
-		</table>
+	<section class="container-schedule">
+		<div class="daily-schedule" id="Thursday">
+			<button class="accordion">Thursday, March 1</button>
+			<div class="panel">
+			<table class="table-schedule events">
 
-		<table class="schedule-container">
-			<tr>
-				<th colspan="2">Friday, March 2</th>
-			</tr>
-			<tr>
-				<td>9:00AM - 12:00PM</td>
-				<td>Excursions</td>
-			</tr>
-			<tr>
-				<td>1:00PM - 2:00PM</td>
-				<td>Lunch Break</td>
-			</tr>
-			<tr>
-				<td>2:00PM - 5:00PM</td>
-				<td>Committee Session II (including Committee Speakers)</td>
-			</tr>
-			<tr>
-				<td>5:00PM - 7:00PM</td>
-				<td>Dinner Break</td>
-			</tr>
-			<tr>
-				<td>7:00PM - 10:00PM</td>
-				<td>Committee Session III</td>
-			</tr>
-		</table>
+			</table>
+			<table class="table-schedule times">
 
-		<table class="schedule-container">
-			<tr>
-				<th colspan="2">Saturday, March 3</th>
-			</tr>
-			<tr>
-				<td>9:00AM - 12:00PM</td>
-				<td>Committee Session IV</td>
-			</tr>
-			<tr>
-				<td>12:00PM - 2:00PM</td>
-				<td>Lunch Break</td>
-			</tr>
-			<tr>
-				<td>2:00PM - 6:00PM</td>
-				<td>Committee Session V</td>
-			</tr>
-			<tr>
-				<td>6:00PM - 8:30PM</td>
-				<td>Dinner Break</td>
-			</tr>
-			<tr>
-				<td>8:30PM - 11:30PM</td>
-				<td>Delegate Dance</td>
-			</tr>
-			<tr>
-				<td>8:30PM - 11:30PM</td>
-				<td>Delegate Social</td>
-			</tr>
-		</table>
+			</table>
+			</div>
+		</div>
 
-		<table class="schedule-container">
-			<tr>
-				<th colspan="2">Sunday, March 4</th>
-			</tr>
-			<tr>
-				<td>9:00AM - 11:00AM</td>
-				<td>Committee Session VI</td>
-			</tr>
-			<tr>
-				<td>11:00AM - 1:00PM</td>
-				<td>Lunch Break</td>
-			</tr>
-			<tr>
-				<td>1:00PM - 2:00PM</td>
-				<td>Closing Ceremonies</td>
-			</tr>
-		</table>
+		<div class="daily-schedule" id="Friday">
+			<h3>Friday, March 2</h3>
+			<table class="table-schedule events">
+
+			</table>
+			<table class="table-schedule times">
+
+			</table>
+		</div>
+
+		<div class="daily-schedule" id="Saturday">
+			<h3>Saturday, March 3</h3>
+			<table class="table-schedule events">
+
+			</table>
+			<table class="table-schedule times">
+
+			</table>
+		</div>
+
+		<div class="daily-schedule" id="Sunday">
+			<h3>Sunday, March 4</h3>
+			<table class="table-schedule events">
+
+			</table>
+			<table class="table-schedule times">
+
+			</table>
+		</div>
 	</section>
 
     <footer class="container-fluid">
@@ -205,6 +147,53 @@
 	<script>
 		scheduleSize();
 		formatTimes('9:00AM - 1:00PM');
+
+		var thursday_schedule = [['12:00PM - 6:00PM', 'Delegation Registration'],
+		['4:00PM - 5:00PM', 'Workshops'],
+		['7:00PM - 8:00PM', 'Opening Ceremonies'],
+		['8:00PM - 11:00PM', 'Committee Session I'],
+		['8:30PM - 11:00PM', 'Committee Session I (General Assemblies)']];
+
+		makeScheduleTable('12:00PM', '11:00PM', 'Thursday, March 1', thursday_schedule);
+
+		var friday_schedule = [['9:00AM - 12:00PM', 'Excursions'],
+			['1:00PM - 2:00PM', 'Lunch Break'],
+			['2:00PM - 5:00PM', 'Committee Session II'],
+			['5:00PM - 7:00PM', 'Dinner Break'],
+			['7:00PM - 10:00PM', 'Committee Session III']];
+
+//		makeScheduleTable('9:00AM', '10:00PM', 'Friday, March 2', friday_schedule);
+
+		var saturday_schedule = [['9:00AM - 12:00PM', 'Committee Session IV'],
+		['12:00PM - 2:00PM', 'Lunch Break'],
+		['2:00PM - 6:00PM','Committee Session V'],
+		['6:00PM - 8:30PM', 'Dinner Break'],
+		['8:30PM - 11:30PM', 'Delegate Dance'],
+		['8:30PM - 11:30PM', 'Delegate Social']];
+
+//		makeScheduleTable('9:00AM', '11:30PM', 'Saturday, March 3', saturday_schedule);
+
+		var sunday_schedule = [['9:00AM - 11:00AM', 'Committee Session VI'],
+		['11:00AM - 1:00PM', 'Lunch Break'],
+		['1:00PM - 2:00PM', 'Closing Ceremonies']];
+
+//		makeScheduleTable('9:00AM', '2:00PM', 'Sunday, March 4', sunday_schedule);
+
+
+        var acc = document.getElementsByClassName("accordion");
+
+        for(i = 0; i < acc.length; i++) {
+            acc[i].onclick = function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                }
+                else {
+                    panel.style.display = "block";
+                }
+            }
+        }
 	</script>
 </body>
 </html>

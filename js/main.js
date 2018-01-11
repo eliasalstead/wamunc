@@ -93,9 +93,16 @@ function initPrgmMap() {
         map: map
     });
 
-  /*  hotel_marker.addListener('click', function() {
-       map.setZoom(20);
-       map.setCenter(hotel_marker.getPosition());
+  /*  var contentString = '<div style="width: 100%; height: 100%; margin: 20px 0 20px 0; padding: 0;">' +
+        '<p style="text-align: center; width: 100%; height: 100%; margin: 0; padding: 0;">Hotel</p>' +
+        '</div>';
+
+    var infoWindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+    hotel_marker.addListener('click', function() {
+        infoWindow.open(map, hotel_marker);
     });  */
 }
 
@@ -159,10 +166,10 @@ function addListeners(panel, panel_list, paddingT) {
     }
 }
 
-function chairBios() {
+function chairBios(bio, pic) {
 
-    var chair_bio = document.getElementsByClassName('chair-bio');
-    var chair_pic = document.getElementsByClassName('chair-pic');
+    var chair_bio = document.getElementsByClassName(bio);
+    var chair_pic = document.getElementsByClassName(pic);
 
     for(i = 0; i < chair_pic.length; i++) {
         var margin_bottom = chair_pic[i].children[0].offsetHeight - chair_bio[i].children[0].offsetHeight;
@@ -172,9 +179,9 @@ function chairBios() {
     }
 }
 
-function chairPics() {
+function chairPics(pic) {
 
-    var chair_pic = document.getElementsByClassName('chair-pic');
+    var chair_pic = document.getElementsByClassName(pic);
 
     for(i = 0; i < chair_pic.length; i++) {
         var image = chair_pic[i].children[0];
@@ -182,7 +189,7 @@ function chairPics() {
         var margin = image.offsetWidth - paragraph.offsetWidth;
         margin /= 2;
         margin += 'px';
-        paragraph.style.marginLeft = margin;
+        paragraph.style.paddingLeft = margin;
     }
 }
 
@@ -208,6 +215,15 @@ function formatTimes(time_frame) {
     var dash_index = time_frame.indexOf('-');
     var begin = time_frame.substr(0, dash_index - 1);
     var end = time_frame.substr(dash_index + 2, time_frame.length - 1);
+    var begin_half = false;
+    var end_half = false;
+
+    if (begin.charAt(begin.indexOf(':') + 1) === '3') {
+        begin_half = true;
+    }
+    if (end.charAt(end.indexOf(':') + 1) === '3') {
+        end_half = true;
+    }
 
     if(begin.includes('AM')) {
         begin = begin.substr(0, begin.indexOf(':'));
@@ -235,5 +251,105 @@ function formatTimes(time_frame) {
         }
     }
 
+    if (begin_half) {
+        begin += 0.5
+    }
+    if (end_half) {
+        end += 0.5;
+    }
+
     return [begin, end];
+}
+
+function formatTimesHeader(time, is_PM) {
+
+    if (time > 12) {
+        time -= 12;
+        time = time.toString();
+        time += ':00PM';
+        is_PM = true;
+    }
+    else if (time === 12) {
+        time = time.toString();
+        time += ':00PM';
+    }
+    else if(time < 12 && is_PM) {
+        time = time.toString();
+        time += ':00PM';
+    }
+    else {
+        time = time.toString();
+        time += ':00AM';
+    }
+
+    return [time, is_PM];
+}
+
+function makeScheduleTable(startTime, endTime, day, schedule) {
+
+    var events_table = document.getElementById(day.substr(0, day.indexOf(','))).children[1].children[0];
+    var times_table = document.getElementById(day.substr(0, day.indexOf(','))).children[1].children[1];
+    var time_frame = startTime + ' - ' + endTime;
+    var formattedTimes = formatTimes(time_frame);
+    var time_header = formattedTimes[1] - formattedTimes[0];
+    var start_header = formattedTimes[0];
+
+    // day header
+ //   events_table.innerHTML += '<tr><th>' + day + '</th></tr>';
+
+    // blank cell in upper left corner of table
+    events_table.innerHTML += '<td></td>';
+    times_table.innerHTML += '<tr class="times-header">';
+    var times_header = document.getElementsByClassName('times-header');
+    var is_PM = false;
+    var time = start_header;
+
+    // format initial time for header
+    var formattedArray = formatTimesHeader(time, is_PM);
+    time = formattedArray[0];
+    is_PM = formattedArray[1];
+
+    // construct header of times
+    for(i = 0; i <= time_header; i++) {
+
+        times_header[parseInt(day.charAt(day.length - 1)) - 1].innerHTML += '<td>' + time + '</td>';
+
+        time = parseInt(time);
+        time++;
+        formattedArray = formatTimesHeader(time, is_PM);
+        time = formattedArray[0];
+        is_PM = formattedArray[1];
+    }
+
+    // close row of times
+    times_header[parseInt(day.charAt(day.length - 1)) - 1].innerHTML += '</tr>';
+
+    for(i = 0; i < schedule.length; i++) {
+
+        events_table.innerHTML += '<tr id="' + i + day.substr(0, day.indexOf(',')) + '"><td class="schedule-event">' + schedule[i][1] + '</td></tr>';
+        var timeArray = formatTimes(schedule[i][0]);
+        var time_period = timeArray[1] - timeArray[0];
+        var num_tds = timeArray[0] - start_header;
+
+    //    times_table.innerHTML += '<tr><td colspan=""></td>';
+    //    for (j = 0; j < Math.floor(num_tds); j++) {
+    //        times_table.innerHTML += '<td></td>';
+    //    }
+
+        /*    if (timeArray[0].toString().includes('.') || timmeArray[1].toString().includes('.')) {
+                times_table.innerHTML += '<td></td>';
+            } */
+
+        if (Math.floor(num_tds) === 0) {
+            times_table.innerHTML += '<tr><td colspan="' + Math.ceil(time_period) + '" style="background-color: rgb(39,64,139);"></td></tr>';
+        }
+        else {
+            times_table.innerHTML += '<tr><td colspan="' + Math.floor(num_tds) + '"></td><td colspan="' + Math.ceil(time_period) + '" style="background-color: rgb(39,64,139);"></td></tr>';
+        }
+
+    }
+
+    /*
+        current.innerHTML += '<td colspan="' + time_period +'" style="background-color: rgb(39,64,139);"></td></tr>';
+    }   */
 }

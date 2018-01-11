@@ -28,6 +28,7 @@
 .sec-member img {
     width: 100%;
     height: 300px;
+    max-width: 100%;
 }
 
 @media (min-width: 1500px) {
@@ -100,32 +101,181 @@ img:hover .sec-bio {
     left: 0;
     bottom: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
     background-color: rgba(192,198,191,0);
     color: #000;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
     visibility: hidden;
 }
 
-.sec-details p {
-    margin: 10px;
-    text-indent: 2.25em;
+.sec-details h1,h2,h3,h4,h5 {
+    padding: 5px;
+    font-size: 28px;
+    opacity: 1;
+    color: #000;
 }
 
 .sec-member:hover .sec-details {
     visibility: visible;
     background-color: rgba(192,198,191,0.6);
 }
-/*
-.gallery {
-    padding: 0 6px;
-    float: left;
-    width: 22%;
-    margin-right: 10px;
+
+.sec-info-brief {
     padding: 0;
-    margin: 0;
 }
-*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    padding: 0;
+}
+
+.close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fefefe;
+    opacity: 0.6;
+    font-size: 70px;
+    font-weight: 300;
+    width: 70px;
+    height: 70px;
+    margin-top: 5%;
+    margin-right: 2.5%;
+    padding: 0;
+    border-radius: 50%;
+    text-align: center;
+    color: #000;
+    border: none;
+    z-index: 400;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    font-family: 'MobiriseIcons';
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides p {
+    color: #000;
+}
+
+.prev, .next {
+    position: fixed;
+    top: 0;
+    background-color: #fefefe;
+    opacity: 0.6;
+    width: 70px;
+    height: 70px;
+    margin-top: 25%;
+    padding-bottom: 100px;
+    padding-right: 10px;
+    color: #000;
+    font-weight: 300;
+    font-size: 70px;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 400;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    font-family: 'MobiriseIcons';
+}
+
+.prev {
+    left: 0;
+    margin-left: 5%;
+    padding-right: 10px;
+}
+
+.next {
+    right: 0;
+    margin-right: 5%;
+    padding-left: 15px;
+}
+
+.prev:hover, .next:hover {
+    opacity: 1;
+    background-color: #fefefe;
+    color: #000;
+    text-decoration: none;
+}
+
+.mySlides {
+    display: none;
+    font-size: 0;
+}
+
+.modal-pic {
+    width: 30%;
+    height: 1000px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    font-size: 24px;
+}
+
+.modal-pic img {
+    width: 80%;
+    height: 300px;
+    margin-left: 10%;
+    padding-top: 30px;
+    display: inline-block;
+}
+
+.modal-pic p {
+    color: #000;
+    display: inline-block;
+    margin-left: 10%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.modal-bio {
+    width: 70%;
+    height: 1000px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    font-size: 24px;
+    text-indent: 2.25em;
+}
+
+.modal-bio p {
+    color: #000;
+    padding: 0 30px 0 30px;
+}
+
 #press-release {
     width: 100%;
     height: 2000px;

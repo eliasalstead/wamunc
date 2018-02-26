@@ -16,67 +16,87 @@
     <script src="../js/main.js"></script>
 </head>
 <body>
-	<nav class="container-fluid">
-		<div class="row">
-			<div class="image-header">
-				<div id="crest">
-					<a href="../index.html"><img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png"></a>
-				</div>
+
+	<nav>
+		<div class="mobile-header">
+			<div class="logo-mobile">
+				<a href="../index.html">
+					<img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png" />
+				</a>
 			</div>
-			<div class="main-nav">
-				<ul>
-					<li>
-						Sponsorship
-						<ul>
-							<li><a href="why.html" style="padding-top: 10px;">Why</a></li>
-							<li><a href="donations.html">Donations</a></li>
-							<li><a href="alumni.html">Alumni Relations</a></li>
-						</ul>
-					</li>
-					<li>
-						Delegate Resources
-						<ul>
-							<li><a href="../delegate/position-papers.html" style="padding-top: 10px;">Position Papers</a></li>
-							<li><a href="../delegate/crisis.html">Crisis How-To</a></li>
-							<li><a href="../delegate/woodley-park.html">Woodley Park</a></li>
-						</ul>
-					</li>
-					<li>
-						Committees
-						<ul>
-							<li><a href="../committees/committees.html" style="padding-top: 10px;">Overview</a></li>
-							<li><a href="../committees/committees.html#international">International Bodies</a></li>
-							<li><a href="../committees/committees.html#regional">Regional Bodies and Councils</a></li>
-							<li><a href="../committees/committees.html#historical">Historical and Specialized Bodies</a></li>
-							<li><a href="../committees/committees.html#crisis" style="padding-bottom: 10px;">Crisis Committees</a></li>
-						</ul>
-					</li>
-					<li>
-						Conference
-						<ul>
-							<li><a href="../conference/registration.html" style="padding-top: 10px;">Registration</a></li>
-							<li><a href="../conference/dates.html">Important Dates</a></li>
-							<li><a href="../conference/financial.html">Financial Information</a></li>
-							<li><a href="../conference/schedule.html">Conference Schedule</a></li>
-							<li><a href="../conference/hotel.html">Hotel</a></li>
-							<li><a href="../conference/programming.html">Programming</a></li>
-							<li><a href="../conference/keynote-speakers.html">Keynote Speakers</a></li>
-							<li><a href="../conference/forms.html" style="padding-bottom: 10px;">Forms</a></li>
-						</ul>
-					</li>
-					<li>
-						About
-						<ul>
-							<li><a href="../about/why-wamunc.html" style="padding-top: 10px;">Why WAMUNC</a></li>
-							<li><a href="../about/meet-the-secretariat.html">Meet the Secretariat</a></li>
-							<li><a href="../about/ias.html">International Affairs Society</a></li>
-							<li><a href="../about/charity.html">Charity</a></li>
-							<li><a href="../about/press-releases.html" style="padding-bottom: 10px;">Press Releases</a></li>
-						</ul>
-					</li>
-				</ul>
+			<div class="mobile-dropdown">
+				<label for="drop" class="toggle">&#9776;</label>
+				<input type="checkbox" id="drop" />
 			</div>
 		</div>
+
+		<div class="image-header">
+			<div class="logo" id="crest">
+				<a href="../index.html">
+					<img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png" />
+				</a>
+			</div>
+		</div>
+
+		<ul class="main-nav">
+			<li>
+				<a href="javascript:void(0)">Sponsorship</a>
+				<label for="drop-1" class="toggle">Sponsorship</label>
+				<input type="checkbox" id="drop-1"/>
+				<ul>
+					<li><a href="why.html" style="padding-top: 10px;">Why</a></li>
+					<li><a href="donations.html">Donations</a></li>
+					<li><a href="alumni.html">Alumni Relations</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Delegate Resources</a>
+				<label for="drop-2" class="toggle">Delegate Resources</label>
+				<input type="checkbox" id="drop-2"/>
+				<ul>
+					<li><a href="../delegate/position-papers.html" style="padding-top: 10px;">Position Papers</a></li>
+					<li><a href="../delegate/crisis.html">Crisis How-To</a></li>
+					<li><a href="../delegate/how-to-prepare.html">How to Prepare</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Committees</a>
+				<label for="drop-3" class="toggle">Committees</label>
+				<input type="checkbox" id="drop-3"/>
+				<ul>
+					<li><a href="../committees/committees.html" style="padding-top: 10px;">Overview</a></li>
+					<li><a href="../committees/committees.html#international">International Bodies</a></li>
+					<li><a href="../committees/committees.html#regional">Regional Bodies and Councils</a></li>
+					<li><a href="../committees/committees.html#historical">Historical and Specialized Bodies</a></li>
+					<li><a href="../committees/committees.html#crisis" style="padding-bottom: 10px;">Crisis Committees</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Conference</a>
+				<label for="drop-4" class="toggle">Conference</label>
+				<input type="checkbox" id="drop-4"/>
+				<ul>
+					<li><a href="../conference/registration.html" style="padding-top: 10px;">Registration</a></li>
+					<li><a href="../conference/financial.html">Financial Information</a></li>
+					<li><a href="../conference/schedule.html">Conference Schedule</a></li>
+					<li><a href="../conference/hotel.html">Hotel</a></li>
+					<li><a href="../conference/programming.html">Programming</a></li>
+					<li><a href="../conference/forms.html" style="padding-bottom: 10px;">Forms</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">About</a>
+				<label for="drop-5" class="toggle">About</label>
+				<input type="checkbox" id="drop-5"/>
+				<ul>
+					<li><a href="../about/why-wamunc.html" style="padding-top: 10px;">Why WAMUNC</a></li>
+					<li><a href="../about/meet-the-secretariat.html">Meet the Secretariat</a></li>
+					<li><a href="../about/ias.html">International Affairs Society</a></li>
+					<li><a href="../about/charity.html">Charity</a></li>
+					<li><a href="../about/press-releases.html" style="padding-bottom: 10px;">Press Releases</a></li>
+				</ul>
+			</li>
+		</ul>
 	</nav>
 
 	<section class="pic-container">
@@ -85,19 +105,65 @@
 		</div>
 	</section>
 
-    <footer class="container-fluid">
-	<div class="col-sm-8">
-	    <p id="copyright">&copy;WAMUNC XX</p>
-	</div>
-	<div class="col-sm-4">
-	<div class="social-media-icons">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/facebook.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/twitter.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/instagram.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/linked-in.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/youtube.png">
-	</div>
-	</div>
-    </footer>
+	<section class="content-container">
+		<p>Thank you very much for your interest in supporting our organization. WAMUNC is a non-profit organization and a subsidiary of the George Washington University, a registered 501c3. WAMUNC is dedicated to providing the most enjoyable educational experience for high school students from around the world. Model UN brings together ambitious, curious, and motivated students from all backgrounds to participate in an exercise that promotes the development of valuable skills. The experiences that delegates have at model UN conference are impactful, and they walk away with new perspectives and more confidence in themselves. The model UN community is unique, and many of our GW staffers, having participated in model UN as delegates, know the importance of running an elite conference. It is with the aid from sponsors, like you, that allows us to put on the best programming we possibly can for our participants.</p>
+	</section>
+
+	<footer class="container-fluid">
+		<div id="copyright">
+			<p>&copy;WAMUNC XX</p>
+		</div>
+		<div class="social-media-icons">
+			<div class="icon-container">
+				<a href="https://www.facebook.com/wamunc" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/facebook.png" />
+				</a>
+				<a href="https://twitter.com/wamunc" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/twitter.png" />
+				</a>
+				<a href="https://www.instagram.com/wamunc/" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/instagram.png" />
+				</a>
+				<a href="https://www.linkedin.com/company/washington-area-model-united-nations-conference-wamunc-" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/linked-in.png" />
+				</a>
+				<a href="https://www.youtube.com/channel/UCdF5FhNw2SDd6Jw_HVilZDw" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/youtube.png" />
+				</a>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+        $('#drop').click(function() {
+            var checked = $('#drop').is(':checked');
+
+            if (checked) {
+                $('.main-nav')[0].style.display = 'block';
+            }
+            else {
+                $('.main-nav')[0].style.display = '';
+            }
+        });
+
+        $('input:not(:first)').each(function() {
+            $( this ).click(function () {
+                var checked = $(this).is(':checked');
+
+                if (checked) {
+                    $(this).prev().css({'background-color': 'rgba(39,64,139,0.7)'});
+                }
+                else {
+                    $(this).prev().css({'background-color': ''});
+                }
+            });
+        });
+
+        centerTitle();
+        window.addEventListener('resize', centerTitle);
+
+        centerIcons();
+        window.addEventListener('resize', centerIcons);
+	</script>
 </body>
 </html>

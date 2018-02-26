@@ -1,17 +1,3 @@
-/*.picture-gallery {
-    margin: 30px;
-    margin-left: 6%;
-    padding: 0;
-    margin: 6%;
-    border: 1px solid blue;
-}*/
-/*
-.picture-gallery {
-    margin-left: 6%;
-    margin-right: auto;
-}
-*/
-
 .sec-gallery {
     font-size: 0;
     margin-top: 40px;
@@ -20,80 +6,80 @@
 
 .sec-member {
     width: 25%;
-    height: 300px;
+    height: 375px;
     position: relative;
     display: inline-block;
 }
 
-.sec-member img {
-    width: 100%;
-    height: 300px;
-    max-width: 100%;
+.sec-gen {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/christabel.jpg") 50% 50% no-repeat;
+    background-size: cover;
 }
 
-@media (min-width: 1500px) {
-    .sec-member {
-        height: 375px;
-    }
-    .sec-member img {
-        height: 375px;
-    }
+.exec-dir {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/sky.jpg") 40% 50% no-repeat;
+    background-size: cover;
 }
 
-@media (max-width: 1200px) {
-    .sec-member {
-        width: 33.333333333%;
-    }
+.cos {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/austin.jpg") 50% 50% no-repeat;
+    background-size: cover;
 }
 
-@media (max-width: 900px) {
-    .sec-member {
-        width: 50%;
-    }
+.sen-adv {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/danielle.jpg") 40% 50% no-repeat;
+    background-size: cover;
 }
 
-@media (max-width: 640px) {
-    .sec-member {
-        width: 100%;
-        height: 450px;
-    }
-    .sec-member img {
-        height: 450px;
-    }
-}
-/*
-.sec-details {
-    width: 100%;
-    position: absolute;
-    visibility: hidden;
-    background-color: black;
+.finance {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/cooper.jpg") 50% 50% no-repeat;
+    background-size: cover;
 }
 
-img:hover .sec-bio {
-    visibility: visible;
-}
-*/
-/*
-.pic-wrap {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    margin-left: 10px;
-    margin-bottom: 10px;
+.tech {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/elias.jpg") 50% 50% no-repeat;
+    background-size: cover;
 }
 
-.pic-pic {
-    width: 100%;
-    height: 100%;
-    max-width: 500px;
-    min-width: 300px;
-    padding: 0;
-    margin: 0;
+.pr {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/kellie.jpg") 50% 50% no-repeat;
+    background-size: cover;
 }
-*/
+
+.prgm {
+ /*   background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/leyla.jpg") 50% 50% no-repeat; */
+    background-size: cover;
+}
+
+.security {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/robert.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.safety {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/ajay.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.intl {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/javeria.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.regional {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/angelo.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.historical {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/clara.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.crisis {
+    background: url("https://s3.amazonaws.com/wamunc-website/secretariat-headshots/anson.jpg") 40% 50% no-repeat;
+    background-size: cover;
+}
 
 .sec-details {
     position: absolute;
@@ -107,15 +93,26 @@ img:hover .sec-bio {
     background-color: rgba(192,198,191,0);
     color: #000;
     font-size: 24px;
-    font-weight: bold;
     visibility: hidden;
 }
 
-.sec-details h1,h2,h3,h4,h5 {
+.sec-details h3, h4, h5 {
     padding: 5px;
-    font-size: 28px;
     opacity: 1;
     color: #000;
+    font-weight: 600;
+}
+
+.sec-details h3 {
+    font-size: 28px;
+}
+
+.sec-details h4 {
+    font-size: 26px;
+}
+
+.sec-details h5 {
+    font-size: 22px;
 }
 
 .sec-member:hover .sec-details {
@@ -232,58 +229,236 @@ img:hover .sec-bio {
 }
 
 .mySlides {
+    height: 100%;
     display: none;
     font-size: 0;
+    overflow: hidden;
+}
+
+.modal-desc-pic {
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .modal-pic {
-    width: 30%;
-    height: 1000px;
-    display: inline-block;
-    vertical-align: top;
-    overflow: hidden;
+    width: 90%;
+    height: 300px;
+    margin-left: 5%;
     font-size: 24px;
 }
 
-.modal-pic img {
-    width: 80%;
-    height: 300px;
-    margin-left: 10%;
-    padding-top: 30px;
-    display: inline-block;
+.modal-sec-info-brief {
+    padding-top: 20px;
 }
 
-.modal-pic p {
+.modal-sec-info-brief p {
     color: #000;
-    display: inline-block;
-    margin-left: 10%;
-    padding-top: 20px;
+    font-size: 20px;
     text-align: center;
+    line-height: 20px;
+}
+
+.modal-desc-bio {
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .modal-bio {
-    width: 70%;
-    height: 1000px;
-    display: inline-block;
-    vertical-align: top;
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 0;
     overflow: hidden;
     font-size: 24px;
     text-indent: 2.25em;
 }
 
-.modal-bio p {
-    color: #000;
-    padding: 0 30px 0 30px;
+@media screen and (max-width: 1300px) {
+    .sec-member {
+        width: 33.3333333%;
+    }
+
+    .sec-details h3 {
+        font-size: 26px;
+    }
+
+    .sec-details h4 {
+        font-size: 24px;
+    }
+
+    .sec-details h5 {
+        font-size: 20px;
+    }
+
+    .modal-content {
+        height: 90%;
+        margin-top: 5%;
+    }
+
+    .mySlides {
+        overflow-y: scroll;
+    }
+
+    .modal-desc-pic {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 0;
+        border-bottom: 1px solid #000;
+    }
+
+    .modal-pic {
+        width: 50%;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .modal-sec-info-brief {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5%;
+    }
+
+    .modal-desc-bio {
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+        margin-top: 10px;
+        padding-bottom: 15px;
+        display: block;
+    }
+
+    .modal-bio p {
+        font-size: 18px;
+        text-indent: 1.75em;
+    }
 }
 
-#press-release {
-    width: 100%;
-    height: 2000px;
+@media screen and (max-width: 860px) {
+    .sec-member {
+        width: 50%;
+        height: 300px;
+    }
+
+    .sec-details h3 {
+        font-size: 24px;
+    }
+
+    .sec-details h4 {
+        font-size: 22px;
+    }
+
+    .sec-details h5 {
+        font-size: 18px;
+    }
+
+    .modal-content {
+        height: 90%;
+        margin-top: 10%;
+    }
+
+    .mySlides {
+        overflow-y: scroll;
+    }
+
+    .modal-desc-pic {
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 1px solid #000;
+    }
+
+    .modal-pic {
+        width: 90%;
+    }
+
+    .modal-sec-info-brief {
+        width: 90%;
+    }
+
+    .modal-desc-bio {
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+        margin-top: 10px;
+        padding-bottom: 15px;
+        display: block;
+    }
+
+    .modal-bio p {
+        font-size: 18px;
+        text-indent: 1.75em;
+    }
 }
 
-#press-release img {
-    width: 80%;
-    margin-left: 10%;
+@media screen and (max-width: 520px) {
+    .sec-member {
+        width: 100%;
+        height: 300px;
+        display: block;
+    }
+
+    .sec-details h3 {
+        font-size: 24px;
+    }
+
+    .sec-details h4 {
+        font-size: 22px;
+    }
+
+    .sec-details h5 {
+        font-size: 20px;
+    }
+
+    .modal-content {
+        height: 90%;
+        margin-top: 10%;
+    }
+
+    .mySlides {
+        overflow-y: scroll;
+    }
+
+    .modal-desc-pic {
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 1px solid #000;
+    }
+
+    .modal-pic {
+        width: 90%;
+    }
+
+    .modal-sec-info-brief {
+        width: 90%;
+    }
+
+    .modal-desc-bio {
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+        margin-top: 10px;
+        padding-bottom: 15px;
+        display: block;
+    }
+
+    .modal-bio p {
+        font-size: 18px;
+        text-indent: 1.75em;
+    }
 }
 
 .accordion {
@@ -299,30 +474,71 @@ img:hover .sec-bio {
     border: none;
     text-align: center;
     outline: none;
-    font-size: 1.5em;
+    font-size: 32px;
     transition: 0.4s;
 }
 
-button.accordion.active, button.accordion:hover {
+.accordion.active, button.accordion:hover {
     background-color: rgba(39,64,139,1);
 }
 
-button.accordion:after {
+.accordion:after {
     content: '\02795';
     float: right;
     margin-right: 15px;
 }
 
-button.accordion.active:after {
+.accordion.active:after {
     content: '\2796';
 }
 
-div.panel {
-    width: 80%;
-    margin-left: 10%;
+.panel {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 50px;
     padding: 0 18px;
     display: none;
     background-color: white;
     outline: none;
     border: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .accordion {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .accordion {
+        width: 90%;
+        margin-left: 5%;
+        font-size: 24px;
+    }
+
+    .panel {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .panel img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .accordion {
+        width: 90%;
+        margin-left: 5%;
+        font-size: 18px;
+    }
+
+    .panel {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .panel img {
+        max-width: 100%;
+    }
 }

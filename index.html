@@ -57,7 +57,7 @@
 				<ul>
 					<li><a href="delegate/position-papers.html" style="padding-top: 10px;">Position Papers</a></li>
 					<li><a href="delegate/crisis.html">Crisis How-To</a></li>
-					<li><a href="delegate/woodley-park.html">Woodley Park</a></li>
+					<li><a href="delegate/how-to-prepare.html">How to Prepare</a></li>
 				</ul>
 			</li>
 			<li>
@@ -78,12 +78,10 @@
 				<input type="checkbox" id="drop-4"/>
 				<ul>
 					<li><a href="conference/registration.html" style="padding-top: 10px;">Registration</a></li>
-					<li><a href="conference/dates.html">Important Dates</a></li>
 					<li><a href="conference/financial.html">Financial Information</a></li>
 					<li><a href="conference/schedule.html">Conference Schedule</a></li>
 					<li><a href="conference/hotel.html">Hotel</a></li>
 					<li><a href="conference/programming.html">Programming</a></li>
-					<li><a href="conference/keynote-speakers.html">Keynote Speakers</a></li>
 					<li><a href="conference/forms.html" style="padding-bottom: 10px;">Forms</a></li>
 				</ul>
 			</li>
@@ -170,16 +168,7 @@
 
 	<script>
 
-		function newsFeedHeight() {
-            var sec_letter_height = document.getElementsByClassName('sec-gen-letter-container')[0].offsetHeight;
-            sec_letter_height = sec_letter_height.toString();
-            sec_letter_height += 'px';
-            document.getElementById('news-feed-container').style.height = sec_letter_height;
-            document.getElementById('news-feed-container').style.marginBottom = '60px';
-        }
-
         newsFeedHeight();
-
 		window.addEventListener('resize', newsFeedHeight);
 
         $('#drop').click(function() {
@@ -206,46 +195,10 @@
             });
         });
 
-		function centerWelcome() {
-			var vidContainer = document.getElementsByClassName('vid-container')[0];
-			var welcomeBox = document.getElementsByClassName('welcome-box')[0];
-
-			var marginSide = vidContainer.offsetWidth - welcomeBox.offsetWidth;
-			marginSide /= 2;
-			marginSide = marginSide.toString();
-			marginSide += 'px';
-			welcomeBox.style.marginLeft = marginSide;
-
-			var marginTop = vidContainer.offsetHeight - welcomeBox.offsetHeight;
-			marginTop /= 2;
-			marginTop = marginTop.toString();
-			marginTop += 'px';
-			welcomeBox.style.marginTop = marginTop;
-		}
-
 		centerWelcome();
-
 		window.addEventListener('resize', centerWelcome);
 
-		function centerIcons() {
-		    var iconFooter = document.getElementsByClassName('social-media-icons')[0];
-		    var iconContainer = document.getElementsByClassName('icon-container')[0];
-
-		    var marginSide = iconFooter.offsetWidth - iconContainer.offsetWidth;
-			marginSide /= 2;
-			marginSide = marginSide.toString();
-			marginSide += 'px';
-			iconContainer.style.marginLeft = marginSide;
-
-			var marginTop = iconFooter.offsetHeight - iconContainer.offsetHeight;
-			marginTop /= 2;
-			marginTop = marginTop.toString();
-			marginTop += 'px';
-			iconContainer.style.marginTop = marginTop;
-		}
-
 		centerIcons();
-
 		window.addEventListener('resize', centerIcons);
 	</script>
 </body>

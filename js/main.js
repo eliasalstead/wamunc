@@ -1,48 +1,14 @@
 function initMap() {
     var center = {lat: 38.909087, lng: -77.042776};
     var map = new google.maps.Map(document.getElementById('map'), {
-	zoom: 13,
-	center: center
+	    zoom: 13,
+	    center: center
     });
+
     var hotel = {lat: 38.924745, lng: -77.054829};
     var hotel_marker = new google.maps.Marker({
-	position: hotel,
-	map: map
-    });
-    var capitol = {lat: 38.890206, lng: -77.009040};
-    var capitol_marker = new google.maps.Marker({
-	position: capitol,
-	map: map
-    });
-    var mall = {lat: 38.889631, lng: -77.022923};
-    var mall_marker = new google.maps.Marker({
-	position: mall,
-	map: map
-    });
-    var gwu = {lat: 38.899879, lng: -77.047249};
-    var gwu_marker = new google.maps.Marker({
-	position: gwu,
-	map: map
-    }); 
-    var air_space = {lat: 38.888419, lng: -77.019879};
-    var air_space_marker = new google.maps.Marker({
-	position: air_space,
-	map: map
-    });
-    var philippines = {lat: 38.907729, lng: -77.038081};
-    var philippines_marker = new google.maps.Marker({
-	position: philippines,
-	map: map
-    });
-    var world_food = {lat: 38.901691, lng: -77.040478};
-    var world_food_marker = new google.maps.Marker({
-	position: world_food,
-	map: map
-    });
-    var wilson = {lat: 38.893734, lng: -77.030381};
-    var wilson_marker = new google.maps.Marker({
-	position: wilson,
-	map: map
+	    position: hotel,
+	    map: map
     });
 }
 
@@ -52,58 +18,66 @@ function initPrgmMap() {
         zoom: 13,
         center: center
     });
+
+    var contentString = '';
+    var infoWindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
     var hotel = {lat: 38.924745, lng: -77.054829};
     var hotel_marker = new google.maps.Marker({
         position: hotel,
         map: map
     });
-    var capitol = {lat: 38.890206, lng: -77.009040};
-    var capitol_marker = new google.maps.Marker({
-        position: capitol,
-        map: map
+    hotel_marker.addListener('click', function() {
+        contentString = '<div class="map-popup">Marriott Wardman Park Hotel</div>';
+        setInfoContent(infoWindow, contentString);
+        infoWindow.open(map, hotel_marker);
     });
-    var mall = {lat: 38.889631, lng: -77.022923};
-    var mall_marker = new google.maps.Marker({
-        position: mall,
-        map: map
-    });
+
     var gwu = {lat: 38.899879, lng: -77.047249};
     var gwu_marker = new google.maps.Marker({
         position: gwu,
         map: map
     });
+    gwu_marker.addListener('click', function() {
+        contentString = '<div class="map-popup">The George Washington University</div>';
+        setInfoContent(infoWindow, contentString);
+        infoWindow.open(map, gwu_marker);
+    });
+
     var air_space = {lat: 38.888419, lng: -77.019879};
     var air_space_marker = new google.maps.Marker({
         position: air_space,
         map: map
     });
-    var philippines = {lat: 38.907729, lng: -77.038081};
-    var philippines_marker = new google.maps.Marker({
-        position: philippines,
-        map: map
-    });
-    var world_food = {lat: 38.901691, lng: -77.040478};
-    var world_food_marker = new google.maps.Marker({
-        position: world_food,
-        map: map
-    });
-    var wilson = {lat: 38.893734, lng: -77.030381};
-    var wilson_marker = new google.maps.Marker({
-        position: wilson,
-        map: map
+    air_space_marker.addListener('click', function() {
+        contentString = '<div class="map-popup">National Air and Space Museum </div>';
+        setInfoContent(infoWindow, contentString);
+        infoWindow.open(map, air_space_marker);
     });
 
-  /*  var contentString = '<div style="width: 100%; height: 100%; margin: 20px 0 20px 0; padding: 0;">' +
-        '<p style="text-align: center; width: 100%; height: 100%; margin: 0; padding: 0;">Hotel</p>' +
-        '</div>';
+    // style popup Info Windows on map
+    google.maps.event.addListener(infoWindow, 'domready', function() {
+        var popupText = document.getElementsByClassName('map-popup')[0];
+        popupText.style.color = '#000';
+        popupText.style.paddingTop = '13px';
+        popupText.style.paddingBottom = '10px';
 
-    var infoWindow = new google.maps.InfoWindow({
-        content: contentString
+        var iwOuter = $('.gm-style-iw');
+        var iwBackground = iwOuter.prev();
+
+        iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+        iwBackground.children(':nth-child(4)').css({'border-radius': '15px'});
+
+        var iwCloseBtn = iwOuter.next();
+
+        iwCloseBtn.css({'opacity': '1', 'top': '23px'});
     });
+}
 
-    hotel_marker.addListener('click', function() {
-        infoWindow.open(map, hotel_marker);
-    });  */
+function setInfoContent(info, content) {
+    info.setContent(content);
 }
 
 function committeeLists() {
@@ -166,47 +140,30 @@ function addListeners(panel, panel_list, paddingT) {
     }
 }
 
-function chairBios(bio, pic) {
+function chairBios() {
 
-    var chair_bio = document.getElementsByClassName(bio);
-    var chair_pic = document.getElementsByClassName(pic);
+    var desc = document.getElementsByClassName('modal-desc-bio');
 
-    for(i = 0; i < chair_pic.length; i++) {
-        var margin_bottom = chair_pic[i].children[0].offsetHeight - chair_bio[i].children[0].offsetHeight;
-        margin_bottom /= 2;
-        margin_bottom += 'px';
-        chair_bio[i].style.paddingTop = margin_bottom;
-    }
-}
-
-function chairPics(pic) {
-
-    var chair_pic = document.getElementsByClassName(pic);
-
-    for(i = 0; i < chair_pic.length; i++) {
-        var image = chair_pic[i].children[0];
-        var paragraph = chair_pic[i].children[1];
-        var margin = image.offsetWidth - paragraph.offsetWidth;
+    for(i = 0; i < desc.length; i++) {
+        var paragraphs = desc[i].children[0];
+        var margin = desc[i].offsetHeight - paragraphs.offsetHeight;
         margin /= 2;
-        margin += 'px';
-        paragraph.style.paddingLeft = margin;
+        margin = margin.toString() + 'px';
+        desc[i].style.paddingTop = margin;
     }
 }
 
-function scheduleSize() {
+function chairPics() {
 
-    var rows = document.getElementsByTagName('tr');
+    var desc = document.getElementsByClassName('modal-desc-pic');
 
-    for(i = 0; i < rows.length; i++) {
-
-        if (rows[i].children[0].tagName === 'TD') {
-            var times = formatTimes(rows[i].children[0].innerHTML);
-            var height = times[1] - times[0];
-            height *= 100;
-            height = height.toString();
-            height += 'px';
-            rows[i].style.height = height;
-        }
+    for(i = 0; i < desc.length; i++) {
+        var image = desc[i].children[0];
+        var info = desc[i].children[1];
+        var margin = desc[i].offsetHeight - (image.offsetHeight + info.offsetHeight);
+        margin /= 2;
+        margin = margin.toString() + 'px';
+        desc[i].style.paddingTop = margin;
     }
 }
 
@@ -287,15 +244,12 @@ function formatTimesHeader(time, is_PM) {
 
 function makeScheduleTable(startTime, endTime, day, schedule) {
 
-    var events_table = document.getElementById(day.substr(0, day.indexOf(','))).children[1].children[0];
-    var times_table = document.getElementById(day.substr(0, day.indexOf(','))).children[1].children[1];
+    var events_table = document.getElementById(day.substr(0, day.indexOf(','))).children[1];
+    var times_table = document.getElementById(day.substr(0, day.indexOf(','))).children[2];
     var time_frame = startTime + ' - ' + endTime;
     var formattedTimes = formatTimes(time_frame);
     var time_header = formattedTimes[1] - formattedTimes[0];
     var start_header = formattedTimes[0];
-
-    // day header
- //   events_table.innerHTML += '<tr><th>' + day + '</th></tr>';
 
     // blank cell in upper left corner of table
     events_table.innerHTML += '<td></td>';
@@ -312,7 +266,7 @@ function makeScheduleTable(startTime, endTime, day, schedule) {
     // construct header of times
     for(i = 0; i <= time_header; i++) {
 
-        times_header[parseInt(day.charAt(day.length - 1)) - 1].innerHTML += '<td>' + time + '</td>';
+        times_header[parseInt(day.charAt(day.length - 1)) - 1].innerHTML += '<td>' + time + '</td><td></td>';
 
         time = parseInt(time);
         time++;
@@ -324,32 +278,135 @@ function makeScheduleTable(startTime, endTime, day, schedule) {
     // close row of times
     times_header[parseInt(day.charAt(day.length - 1)) - 1].innerHTML += '</tr>';
 
+
     for(i = 0; i < schedule.length; i++) {
 
-        events_table.innerHTML += '<tr id="' + i + day.substr(0, day.indexOf(',')) + '"><td class="schedule-event">' + schedule[i][1] + '</td></tr>';
+        events_table.innerHTML += '<tr id="' + i + day.substr(0, day.indexOf(',')) + '"><td class="schedule-event">' + schedule[i][1] + '<br/>' + schedule[i][0] + '</td></tr>';
         var timeArray = formatTimes(schedule[i][0]);
-        var time_period = timeArray[1] - timeArray[0];
-        var num_tds = timeArray[0] - start_header;
+        var time_period = (timeArray[1] - timeArray[0]) * 2;
+        var num_tds = (timeArray[0] - start_header) * 2;
 
-    //    times_table.innerHTML += '<tr><td colspan=""></td>';
-    //    for (j = 0; j < Math.floor(num_tds); j++) {
-    //        times_table.innerHTML += '<td></td>';
-    //    }
-
-        /*    if (timeArray[0].toString().includes('.') || timmeArray[1].toString().includes('.')) {
-                times_table.innerHTML += '<td></td>';
-            } */
-
-        if (Math.floor(num_tds) === 0) {
-            times_table.innerHTML += '<tr><td colspan="' + Math.ceil(time_period) + '" style="background-color: rgb(39,64,139);"></td></tr>';
+        if (num_tds === 0) {
+            times_table.innerHTML += '<tr><td colspan="' + time_period + '" style="background-color: rgb(39,64,139);"></td></tr>';
         }
         else {
-            times_table.innerHTML += '<tr><td colspan="' + Math.floor(num_tds) + '"></td><td colspan="' + Math.ceil(time_period) + '" style="background-color: rgb(39,64,139);"></td></tr>';
+            times_table.innerHTML += '<tr><td colspan="' + num_tds + '"></td><td colspan="' + time_period + '" style="background-color: rgb(39,64,139);"></td></tr>';
         }
-
     }
+}
 
-    /*
-        current.innerHTML += '<td colspan="' + time_period +'" style="background-color: rgb(39,64,139);"></td></tr>';
-    }   */
+function mobileSchedule(schedules) {
+    var mobile = document.getElementsByClassName('mobile-schedule');
+    var days = ['Thursday, March 1', 'Friday, March 2', 'Saturday, March 3', 'Sunday, March 4'];
+
+    for(i = 0; i < days.length; i++) {
+        mobile[i].innerHTML += '<tr><th colspan="2">' + days[i] + '</th></tr>';
+
+        for (j = 0; j < schedules[i].length; j++) {
+            mobile[i].innerHTML += '<tr><td>' + schedules[i][j][1] + '</td><td>' + schedules[i][j][0] + '</td></tr>';
+        }
+    }
+}
+
+function newsFeedHeight() {
+    var sec_letter_height = document.getElementsByClassName('sec-gen-letter-container')[0].offsetHeight;
+    sec_letter_height = sec_letter_height.toString();
+    sec_letter_height += 'px';
+    document.getElementById('news-feed-container').style.height = sec_letter_height;
+    document.getElementById('news-feed-container').style.marginBottom = '60px';
+}
+
+// center page title within container on home page
+function centerWelcome() {
+    var vidContainer = document.getElementsByClassName('vid-container')[0];
+    var welcomeBox = document.getElementsByClassName('welcome-box')[0];
+
+    var marginSide = vidContainer.offsetWidth - welcomeBox.offsetWidth;
+    marginSide /= 2;
+    marginSide = marginSide.toString();
+    marginSide += 'px';
+    welcomeBox.style.marginLeft = marginSide;
+
+    var marginTop = vidContainer.offsetHeight - welcomeBox.offsetHeight;
+    marginTop /= 2;
+    marginTop = marginTop.toString();
+    marginTop += 'px';
+    welcomeBox.style.marginTop = marginTop;
+}
+
+// center page title within container
+function centerTitle() {
+    var picContainer = document.getElementsByClassName('pic-container')[0];
+    var pageTitle = document.getElementsByClassName('page-title')[0];
+
+    var marginSide = picContainer.offsetWidth - pageTitle.offsetWidth;
+    marginSide /= 2;
+    marginSide = marginSide.toString();
+    marginSide += 'px';
+    pageTitle.style.marginLeft = marginSide;
+
+    var marginTop;
+    if ($('NAV').css('position') !== 'fixed') {
+        marginTop = picContainer.offsetHeight - pageTitle.offsetHeight;
+        marginTop /= 2;
+        marginTop = marginTop.toString() + 'px';
+        pageTitle.style.marginTop = marginTop;
+    }
+    else {
+        marginTop = picContainer.offsetHeight - pageTitle.offsetHeight;
+        marginTop += 160;
+        marginTop /= 2;
+        marginTop = marginTop.toString() + 'px';
+        pageTitle.style.marginTop = marginTop;
+    }
+}
+
+// centers social media icons in footer
+function centerIcons() {
+    var iconFooter = document.getElementsByClassName('social-media-icons')[0];
+    var iconContainer = document.getElementsByClassName('icon-container')[0];
+
+    var marginSide = iconFooter.offsetWidth - iconContainer.offsetWidth;
+    marginSide /= 2;
+    marginSide = marginSide.toString();
+    marginSide += 'px';
+    iconContainer.style.marginLeft = marginSide;
+
+    var marginTop = iconFooter.offsetHeight - iconContainer.offsetHeight;
+    marginTop /= 2;
+    marginTop = marginTop.toString();
+    marginTop += 'px';
+    iconContainer.style.marginTop = marginTop;
+}
+
+function meetSecListeners() {
+    var secDivs = document.getElementsByClassName('sec-details');
+    var secInfo = document.getElementsByClassName('sec-info-brief');
+
+    for(i = 0; i < secDivs.length; i++) {
+        secDivs[i].addEventListener('mouseover', meetSec.bind(null, secDivs[i], secInfo[i]));
+    }
+}
+
+// centers sec info within div and modal
+function meetSec(secMem, secInfo) {
+    var margin = secMem.offsetHeight - secInfo.offsetHeight;
+    margin /= 2;
+    margin = margin.toString() + 'px';
+    secInfo.style.marginTop = margin;
+}
+
+function centerChairBio() {
+    var pic = document.getElementsByClassName('chair-pic');
+    var bio = document.getElementsByClassName('chair-bio');
+
+    for(i = 0; i < pic.length; i++) {
+        var bio_children = bio[i].children;
+        for(j = 0; j < bio_children.length; j++) {
+            var padding = pic[i].offsetHeight - bio[i].children[j].offsetHeight;
+            padding /= 2;
+            padding = padding.toString() + 'px';
+            bio[i].style.paddingTop = padding;
+        }
+    }
 }

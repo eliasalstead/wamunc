@@ -16,94 +16,189 @@
     <script src="../../js/main.js"></script>
 </head>
 <body>
-	<nav class="container-fluid">
-		<div class="row">
-			<div class="image-header">
-				<div id="crest">
-					<a href="../../index.html"><img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png"></a>
-				</div>
+
+	<nav>
+		<div class="mobile-header">
+			<div class="logo-mobile">
+				<a href="../../index.html">
+					<img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png" />
+				</a>
 			</div>
-			<div class="main-nav">
-				<ul>
-					<li>
-						Sponsorship
-						<ul>
-							<li><a href="../../sponsorship/why.html" style="padding-top: 10px;">Why</a></li>
-							<li><a href="../../sponsorship/donations.html">Donations</a></li>
-							<li><a href="../../sponsorship/alumni.html">Alumni Relations</a></li>
-						</ul>
-					</li>
-					<li>
-						Delegate Resources
-						<ul>
-							<li><a href="../../delegate/position-papers.html" style="padding-top: 10px;">Position Papers</a></li>
-							<li><a href="../../delegate/crisis.html">Crisis How-To</a></li>
-							<li><a href="../../delegate/woodley-park.html">Woodley Park</a></li>
-						</ul>
-					</li>
-					<li>
-						Committees
-						<ul>
-							<li><a href="../committees.html" style="padding-top: 10px;">Overview</a></li>
-							<li><a href="">International Bodies</a></li>
-							<li><a href="">Regional Bodies and Councils</a></li>
-							<li><a href="">Historical and Specialized Bodies</a></li>
-							<li><a href="" style="padding-bottom: 10px;">Crisis Committees</a></li>
-						</ul>
-					</li>
-					<li>
-						Conference
-						<ul>
-							<li><a href="../../conference/registration.html" style="padding-top: 10px;">Registration</a></li>
-							<li><a href="../../conference/dates.html">Important Dates</a></li>
-							<li><a href="../../conference/financial.html">Financial Information</a></li>
-							<li><a href="../../conference/schedule.html">Conference Schedule</a></li>
-							<li><a href="../../conference/hotel.html">Hotel</a></li>
-							<li><a href="../../conference/programming.html">Programming</a></li>
-							<li><a href="../../conference/keynote-speakers.html">Keynote Speakers</a></li>
-							<li><a href="../../conference/forms.html" style="padding-bottom: 10px;">Forms</a></li>
-						</ul>
-					</li>
-					<li>
-						About
-						<ul>
-							<li><a href="../../about/why-wamunc.html" style="padding-top: 10px;">Why WAMUNC</a></li>
-							<li><a href="../../about/meet-the-secretariat.html">Meet the Secretariat</a></li>
-							<li><a href="../../about/ias.html">IAS</a></li>
-							<li><a href="../../about/charity.html">Charity</a></li>
-							<li><a href="../../about/press-releases.html" style="padding-bottom: 10px;">Press Releases</a></li>
-						</ul>
-					</li>
-				</ul>
+			<div class="mobile-dropdown">
+				<label for="drop" class="toggle">&#9776;</label>
+				<input type="checkbox" id="drop" />
 			</div>
 		</div>
+
+		<div class="image-header">
+			<div class="logo" id="crest">
+				<a href="../../index.html">
+					<img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png" />
+				</a>
+			</div>
+		</div>
+
+		<ul class="main-nav">
+			<li>
+				<a href="javascript:void(0)">Sponsorship</a>
+				<label for="drop-1" class="toggle">Sponsorship</label>
+				<input type="checkbox" id="drop-1"/>
+				<ul>
+					<li><a href="../../sponsorship/why.html" style="padding-top: 10px;">Why</a></li>
+					<li><a href="../../sponsorship/donations.html">Donations</a></li>
+					<li><a href="../../sponsorship/alumni.html">Alumni Relations</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Delegate Resources</a>
+				<label for="drop-2" class="toggle">Delegate Resources</label>
+				<input type="checkbox" id="drop-2"/>
+				<ul>
+					<li><a href="../../delegate/position-papers.html" style="padding-top: 10px;">Position Paper Resources</a></li>
+					<li><a href="../../delegate/crisis.html">Crisis How-To</a></li>
+					<li><a href="../../delegate/how-to-prepare.html">How to Prepare</a></li>
+					<li><a href="../../delegate/woodley-park.html">Woodley Park</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Committees</a>
+				<label for="drop-3" class="toggle">Committees</label>
+				<input type="checkbox" id="drop-3"/>
+				<ul>
+					<li><a href="../committees.html" style="padding-top: 10px;">Overview</a></li>
+					<li><a href="../committees.html#international">International Bodies</a></li>
+					<li><a href="../committees.html#regional">Regional Bodies and Councils</a></li>
+					<li><a href="../committees.html#historical">Historical and Specialized Bodies</a></li>
+					<li><a href="../committees.html#crisis" style="padding-bottom: 10px;">Crisis Committees</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Conference</a>
+				<label for="drop-4" class="toggle">Conference</label>
+				<input type="checkbox" id="drop-4"/>
+				<ul>
+					<li><a href="../../conference/registration.html" style="padding-top: 10px;">Registration</a></li>
+					<li><a href="../../conference/financial.html">Financial Information</a></li>
+					<li><a href="../../conference/schedule.html">Conference Schedule</a></li>
+					<li><a href="../../conference/hotel.html">Hotel</a></li>
+					<li><a href="../../conference/programming.html">Programming</a></li>
+					<li><a href="../../conference/forms.html" style="padding-bottom: 10px;">Forms</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">About</a>
+				<label for="drop-5" class="toggle">About</label>
+				<input type="checkbox" id="drop-5"/>
+				<ul>
+					<li><a href="../../about/why-wamunc.html" style="padding-top: 10px;">Why WAMUNC</a></li>
+					<li><a href="../../about/meet-the-secretariat.html">Meet the Secretariat</a></li>
+					<li><a href="../../about/ias.html">International Affairs Society</a></li>
+					<li><a href="../../about/charity.html">Charity</a></li>
+					<li><a href="../../about/press-releases.html" style="padding-bottom: 10px;">Press Releases</a></li>
+				</ul>
+			</li>
+		</ul>
 	</nav>
 
     <section class="pic-container">
 	<div class="page-title">
-	    <h1>Fourth Committee: Special Political and Decolonization</h1>    
+	    <h2>Fourth Committee: Special Political and Decolonization</h2>
 	</div>
     </section> 
 
     <section class="container-fluid">
 	<div class="row committee-content">
 	    <p>The Fourth Committee of the General Assembly, the Special Political and Decolonization Committee (SPECPOL), has been tasked with some of the most sensitive political situations since its inception. From dealing with decolonization after World War II to being responsible for UN Peacekeepers, SPECPOL is imperative to maintaining international peace. The first topic, "Updating UN Standards for Peacekeeping and Peacebuilding,"  looks to adjust the UN's ability to respond to the changing nature of conflict with the advent of non-state actors and cyberwarfare. The second topic, "The Role of the Law of the Sea Treaty in the South China Sea Conflict" aims to find a solution to a potentially volatile situation within the context of a key treaty in international relations. Delegates should be ready to develop creative ideas for these very complicated and pressing topics.</p>
+		<div class="bg">
+			<button class="bg-button" type="button">
+				<a class="bg-link" href="" target="_blank">Background Guide</a>
+			</button>
+		</div>
+		<div class="chair-info">
+			<div class="chair-pic-section">
+				<div class="chair-pic SPECPOL1"></div>
+				<div class="chair-info-brief">
+					<p>Kara Zielinski</p>
+					<p>kzielinski@gwu.edu</p>
+				</div>
+			</div>
+			<div class="chair-bio">
+				<p>Dear Delegates,</p>
+				<p>Hello everyone! My name is Kara Zielinski and I will be serving as one of the chairs of SPECPOL at WAMUNC this year. I am a senior at the George Washington University studying biophysics and math. International affairs and Model UN have always been passions of mine. I started participating in MUN at Oceanside High School in New York. At GW, I continued competing in MUN. I served as the Head Delegate of the GWMUN team for 2.5 years and have been to over 20 conferences. Most of the time I am in double delegate General Assembly style committees, so I am very excited to be chairing SPECPOL! This is my fourth and last time chairing a WAMUNC committee so it will definitely be a little bittersweet.</p>
+				<p>My favorite part of MUN is preparing technical solutions that are driven by my country’s specific policy. Diving into the intricacies of the topic and really learning about an issue is the most important part of being a delegate. I encourage you all to try to spend time understanding how your country fits into the scheme of both topics. This will help you craft creative plans to address these pressing issues. If you have any questions about the topics or MUN please feel free to email me at kzielinski@gwu.edu.</p>
+				<p>I look forward to meeting you all!</p>
+			</div>
+			<div class="chair-pic-section">
+				<div class="chair-pic SPECPOL2"></div>
+				<div class="chair-info-brief">
+					s<p></p>
+				</div>
+			</div>
+			<div class="chair-bio">
+				<p></p>
+			</div>
+		</div>
 	</div>
     </section>
 
-    <footer class="container-fluid">
-	<div class="col-sm-8">
-	    <p id="copyright">&copy;WAMUNC XX</p>
-	</div>
-	<div class="col-sm-4">
-	<div class="social-media-icons">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/facebook.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/twitter.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/instagram.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/linked-in.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/youtube.png">
-	</div>
-	</div>
-    </footer>
+	<footer class="container-fluid">
+		<div id="copyright">
+			<p>&copy;WAMUNC XX</p>
+		</div>
+		<div class="social-media-icons">
+			<div class="icon-container">
+				<a href="https://www.facebook.com/wamunc" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/facebook.png" />
+				</a>
+				<a href="https://twitter.com/wamunc" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/twitter.png" />
+				</a>
+				<a href="https://www.instagram.com/wamunc/" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/instagram.png" />
+				</a>
+				<a href="https://www.linkedin.com/company/washington-area-model-united-nations-conference-wamunc-" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/linked-in.png" />
+				</a>
+				<a href="https://www.youtube.com/channel/UCdF5FhNw2SDd6Jw_HVilZDw" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/youtube.png" />
+				</a>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+        chairBios('chair-bio', 'chair-pic');
+        chairPics('chair-pic');
+
+        $('#drop').click(function() {
+            var checked = $('#drop').is(':checked');
+
+            if (checked) {
+                $('.main-nav')[0].style.display = 'block';
+            }
+            else {
+                $('.main-nav')[0].style.display = '';
+            }
+        });
+
+        $('input:not(:first)').each(function() {
+            $( this ).click(function () {
+                var checked = $(this).is(':checked');
+
+                if (checked) {
+                    $(this).prev().css({'background-color': 'rgba(39,64,139,0.7)'});
+                }
+                else {
+                    $(this).prev().css({'background-color': ''});
+                }
+            });
+        });
+
+        centerTitle();
+        window.addEventListener('resize', centerTitle);
+
+        centerIcons();
+        window.addEventListener('resize', centerIcons);
+	</script>
 </body>
 </html>

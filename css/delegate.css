@@ -1,0 +1,48 @@
+.delegate-container {
+    margin-bottom: 70px;
+}
+
+.delegate-container h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.delegate-container p {
+    text-indent: 0;
+    font-size: 24px;
+}
+
+.delegate-container ol {
+    margin-bottom: 40px;
+}
+
+.delegate-container li {
+    font-size: 28px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.prepare a {
+    width: 400px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #000;
+    text-decoration: none;
+}
+
+.prepare a:hover {
+/*    font-size: 34px; */
+}
+
+@media screen and (max-width: 768px) {
+    .prepare a {
+        max-width: 100%;
+        font-size: 22px;
+    }
+}

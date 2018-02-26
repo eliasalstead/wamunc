@@ -1,32 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Alumni Relations</title>
+    <title>How to Prepare</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/home.css" />
-    <link rel="stylesheet" type="text/css" href="../css/sponsorship.css" />
+    <link rel="stylesheet" type="text/css" href="../css/delegate.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css" />
- 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
-
-    <style>
-        table {
-            border: 1px solid red;
-            display: none;
-        }
-
-        @media screen and (max-width: 480px) {
-            table {
-                display: block;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -35,43 +22,42 @@
             <div class="logo-mobile">
                 <a href="../index.html">
                     <img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png" />
-               </a>
+                </a>
             </div>
             <div class="mobile-dropdown">
                 <label for="drop" class="toggle">&#9776;</label>
                 <input type="checkbox" id="drop" />
-          </div>
+            </div>
         </div>
 
-       <div class="image-header">
+        <div class="image-header">
             <div class="logo" id="crest">
                 <a href="../index.html">
                     <img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png" />
-              </a>
+                </a>
             </div>
-     </div>
+        </div>
 
-      <ul class="main-nav">
+        <ul class="main-nav">
             <li>
                 <a href="javascript:void(0)">Sponsorship</a>
                 <label for="drop-1" class="toggle">Sponsorship</label>
-               <input type="checkbox" id="drop-1"/>
+            <input type="checkbox" id="drop-1"/>
                 <ul>
-                    <li><a href="why.html" style="padding-top: 10px;">Why</a></li>
-                   <li><a href="donations.html">Donations</a></li>
-                    <li><a href="alumni.html">Alumni Relations</a></li>
+                    <li><a href="../sponsorship/why.html" style="padding-top: 10px;">Why</a></li>
+                    <li><a href="../sponsorship/donations.html">Donations</a></li>
+                    <li><a href="../sponsorship/alumni.html">Alumni Relations</a></li>
                 </ul>
-           </li>
-           <li>
+            </li>
+            <li>
                 <a href="javascript:void(0)">Delegate Resources</a>
                 <label for="drop-2" class="toggle">Delegate Resources</label>
-               <input type="checkbox" id="drop-2"/>
-               <ul>
-                    <li><a href="../delegate/position-papers.html" style="padding-top: 10px;">Position Paper Resources</a></li>
-                    <li><a href="../delegate/crisis.html">Crisis How-To</a></li>
-                    <li><a href="../delegate/how-to-prepare.html">How to Prepare</a></li>
-                    <li><a href="../delegate/woodley-park.html">Woodley Park</a></li>
-              </ul>
+                <input type="checkbox" id="drop-2"/>
+                <ul>
+                    <li><a href="position-papers.html" style="padding-top: 10px;">Position Papers</a></li>
+                    <li><a href="crisis.html">Crisis How-To</a></li>
+                    <li><a href="how-to-prepare.html">How to Prepare</a></li>
+                </ul>
             </li>
             <li>
                 <a href="javascript:void(0)">Committees</a>
@@ -99,10 +85,10 @@
                 </ul>
             </li>
             <li>
-               <a href="javascript:void(0)">About</a>
+                <a href="javascript:void(0)">About</a>
                 <label for="drop-5" class="toggle">About</label>
                 <input type="checkbox" id="drop-5"/>
-               <ul>
+                <ul>
                     <li><a href="../about/why-wamunc.html" style="padding-top: 10px;">Why WAMUNC</a></li>
                     <li><a href="../about/meet-the-secretariat.html">Meet the Secretariat</a></li>
                     <li><a href="../about/ias.html">International Affairs Society</a></li>
@@ -115,10 +101,19 @@
 
     <section class="pic-container">
         <div class="page-title">
-            <h2>Alumni Relations</h2>
+            <h2>How to Prepare</h2>
         </div>
     </section>
-    
+
+    <section class="content-container prepare">
+        <p>While model UN can seem daunting, being properly prepared often helps delegates in easing their fears about committee. In order for a delegate to be prepared for committee, the delegate must research their position and familiarize themselves with the structure, rules, and procedures of the assigned committee. We have attached below several guides in order to help delegates prepare for their experience at WAMUNC. Please have delegates note the difference between standard, specialized, and crisis committees. Each of these committee types has a different structure and parliamentary procedure.</p>
+        <a href="C:\Users\elias\Desktop\how-to-research.pdf" target="_blank">How to Research</a>
+        <a href="C:\Users\elias\Desktop\how-to-write-position-papers.pdf" target="_blank">How to Write a Position Paper</a>
+        <a href="C:\Users\elias\Desktop\committee-structure.pdf" target="_blank">Committee Structure</a>
+        <a href="C:\Users\elias\Desktop\rules-of-procedure.pdf" target="_blank">Rules of Procedure</a>
+        <a href="C:\Users\elias\Desktop\how-to-write-working-papers.pdf" target="_blank">How to Write a Working Paper</a>
+    </section>
+
     <footer class="container-fluid">
         <div id="copyright">
             <p>&copy;WAMUNC XX</p>
@@ -145,16 +140,6 @@
     </footer>
 
     <script>
-        function makeTable() {
-            var tables = document.getElementsByClassName('mobile');
-
-            for(i = 0; i < tables.length; i++) {
-                tables[i].innerHTML += '<tr><td>Good</td></tr>';
-            }
-        }
-
-        makeTable();
-
         $('#drop').click(function() {
             var checked = $('#drop').is(':checked');
 

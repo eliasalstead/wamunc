@@ -55,14 +55,17 @@ nav {
     float: left;
     margin: 5% 5% 5% 5%;
     padding: 0;
+    min-width: 130px;
+    max-width: 150px;
+    min-height: 130px;
+    max-height: 170px;
 }
 
 .main-nav {
-    width: 80%;
+    width: 75%;
     height: 160px;
     float: right;
     color: white;
-    font-size: 30px;
     list-style: none;
     position: relative;
     display: inline-block;
@@ -89,7 +92,7 @@ nav {
     height: 160px;
     display: block;
     margin: 0;
-    padding: 0 40px;
+    padding: 0 25px;
     line-height: 160px;
     color: #fff;
     font-size: 26px;
@@ -124,7 +127,7 @@ nav ul ul {
     position: absolute;
     top: 160px;
     left: 0;
-    width: 400px;
+    width: 375px;
     padding: 0;
     background-color: rgba(39,64,139,0.7);
     -webkit-box-shadow: none;
@@ -136,7 +139,41 @@ nav ul li:hover > ul {
     display: block;
 }
 
-@media screen and (max-width : 768px) {
+@media screen and (min-width: 1024px) and (max-width: 1124px) {
+    .image-header {
+        margin-left: 0;
+    }
+
+    .main-nav {
+        width: 80%;
+        margin-right: 30px;
+    }
+
+    .main-nav>li>a {
+        font-size: 20px;
+    }
+
+    .main-nav>li ul>li>a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1124px) and (max-width: 1324px) {
+    .image-header {
+        margin-left: 0;
+    }
+
+    .main-nav {
+        width: 80%;
+        margin-right: 40px;
+    }
+
+    .main-nav>li>a {
+        font-size: 24px;
+   }
+}
+
+@media screen and (max-width : 1024px) {
     nav {
         position: relative;
         margin: 0;
@@ -167,7 +204,7 @@ nav ul li:hover > ul {
     .logo-mobile img {
         width: 80%;
         height: 130px;
-        max-width: 160px;
+        max-width: 150px;
         margin: 5% 0 0 10%;
     }
 
@@ -301,129 +338,6 @@ nav ul li:hover > ul {
     }
 }
 
-/*
-nav {
-    width: 100%;
-    position: fixed;
-    height: 160px;
-    z-index: 100;
-    background-color: rgba(39,64,139,0.7);
-}
-
-.image-header {
-    width: 10%;
-    height: 100%;
-    float: left;
-    margin-left: 5%;
-    display: inline-block;
-    background-color: rgba(39,64,139,0);
-}
-
-#crest {
-    width: 90%;
-    height: 90%;
-    padding: 0;
-    margin: 5% 5% 5% 5%;
-    display: inline-block;
-}
-
-#crest a {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-#crest img {
-    width: 90%;
-    height: 90%;
-    float: left;
-    margin: 5% 5% 5% 5%;
-    padding: 0;
-}
-
-.main-nav {
-    width: 65%;
-    height: 100%;
-    float: right;
-    color: white;
-    font-size: 30px;
-    padding-right: 30px;
-}
-
-.main-nav>ul {
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    float: right;
-    margin-right: 40px;
-}
-
-.main-nav>ul>li {
-    display: inline-block;
-    position: relative;
-    height: 100%;
-    margin: 0;
-    padding-top: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
-    float: right;
-    color: #fff;
-    cursor: pointer;
-}
-
-.main-nav>ul>li>ul {
-    padding: 0;
-    position: absolute;
-    top: 160px;
-    left: 0;
-    width: 400px;
-    z-index: 1;
-    overflow: visible;
-    background-color: rgb(39,64,139);
-    list-style: none;
-    text-decoration: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    display: none;
-    visibility: hidden;
-}
-
-.main-nav a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    padding-left: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: white;
-    font-size: 25px;
-    text-decoration: none;
-}
-
-.main-nav>ul>li:hover, .main-nav>ul>li>ul>li:hover {
-    background-color: rgba(39,64,139,0.7);
-}
-
-.main-nav ul li ul:hover, .main-nav ul li:hover ul {
-    display: block;
-    visibility: visible;
-    background-color: rgba(39,64,139,0.7);
-}
-
-#crest:hover {
-    background-color: rgba(39,64,139,0);
-}
-
-#icon-list-item {
-    display: none;
-}
-
-#icon-list-item:hover {
-    background-color: rgba(39,64,139,0);
-}*/
-
 .vid-container {
     height: 1000px;
     padding: 0;
@@ -459,7 +373,7 @@ nav {
     border-color: rgba(39, 64, 139, 0.7)
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
     .vid-container {
         width: 100%;
         height: 500px;
@@ -528,7 +442,7 @@ nav {
     margin-left: -20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
     .sec-gen-letter-container {
         width: 100%;
     }
@@ -565,7 +479,7 @@ nav {
     margin-bottom: 20px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     #news-feed-container {
         display: none;
     }
@@ -609,7 +523,7 @@ footer {
     margin: 3px 3px 3px 3px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     #copyright {
         width: 100%;
         height: 50px;
@@ -647,21 +561,38 @@ footer {
 
 .pic-container {
     height: 600px;
-    background-color: black;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
 }
 
 .page-title {
-    height: 100px;
-    position: relative;
-    float: right;
-    margin-top: 275px;
-    margin-right: 10%;
-    background-color: inherit;
+    color: #fff;
+    position: absolute;
+    right: 175px;
+    text-align: right;
 }
 
 .page-title h2 {
     color: #fff;
     font-size: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+    .pic-container {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .page-title {
+        text-align: center;
+        right: auto;
+    }
+
+    .page-title h2 {
+        font-size: 50px;
+    }
 }
 
 .content-container {
@@ -675,7 +606,26 @@ footer {
     padding: 0;
     text-indent: 2.25em;
 }
-/*
+
+.content-container h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    .content-container {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .content-container p {
+        text-indent: 2em;
+    }
+}
+
 .button {
     width: 60%;
     height: 50px;
@@ -716,4 +666,3 @@ footer {
     text-decoration: none;
     color: #fff;
 }
-*/

@@ -1,3 +1,8 @@
+.position-papers {
+    background: url("position-papers-background.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
 .delegate-container {
     margin-bottom: 70px;
 }

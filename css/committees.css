@@ -309,6 +309,82 @@
     background-size: contain;
 }
 
+.CSW {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/CSW.jpg") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.Co-EU {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/Council-EU.png") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.COPUOS {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/COPUOS.png") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.AU {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/African-Union.JPG") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.unep {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/UNEP.png") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.civ {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/1177.jpg") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.nypd {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/NYPD.jpeg") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.who {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/WHO.png") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.DNC {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/DNC.jpg") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.tibet {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/Tibet.JPG") 50% 50% no-repeat;
+    background-size: contain;
+    -webkit-transform: rotate(90deg);
+}
+
+.egypt {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/2013-Egypt.JPG") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.ad-hoc {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/Ad-Hoc.png") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.NSC {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/NSC.jpg") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.lords {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/Lords.png") 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.starfleet {
+    background: url("https://s3.amazonaws.com/wamunc-website/staff-headshots/Starfleet.jpg") 50% 50% no-repeat;
+    background-size: contain;
+}
+
 @media screen and (max-width: 520px) {
     .committee-content {
         width: 80%;

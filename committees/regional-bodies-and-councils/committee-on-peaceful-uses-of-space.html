@@ -16,94 +16,181 @@
     <script src="../../js/main.js"></script>
 </head>
 <body>
-    <nav class="container-fluid">
-	<div class="row">
-	    <div class="image-header">
-		<div id="crest">
-		    <a href="../index.html"><img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png"></a>
-		</div>		
-	    </div>
-	    <div class="main-nav">
-	        <ul>
-		    <li>
-			Sponsorship
-			<ul>
-			    <li><a href="">Why</a></li>
-			    <li><a href="">Donations</a></li>
-			    <li><a href="">Alumni Relations</a></li>
-			</ul>
-		    </li>
-		    <li>
-			Delegate Resources
-			<ul>
-			    <li><a href="">Position Papers</a></li>
-			    <li><a href="">Crisis How-To</a></li>
-			    <li><a href="">Woodley Park</a></li>
-			</ul>
-		    </li>
-		    <li>
-			Committees
-			<ul>
-			    <li><a href="committees.html">Overview</a></li>
-			    <li><a href="">International Bodies</a></li>
-			    <li><a href="">Regional Bodies and Councils</a></li>
-			    <li><a href="">Historical and Specialized Bodies</a></li>
-			    <li><a href="" style="padding-bottom: 10px;">Crisis Committees</a></li>
-			</ul>
-		    </li>
-		    <li>
-			Conference
-			<ul>
-			    <li><a href="">Registration</a></li>
-			    <li><a href="">Important Dates</a></li>
-			    <li><a href="">Financial Information</a></li>
-			    <li><a href="">Conference Schedule</a></li>
-			    <li><a href="">Hotel</a></li>
-			    <li><a href="">Programming</a></li>
-			    <li><a href="">Keynote Speakers</a></li>
-			    <li><a href="" style="padding-bottom: 10px;">Forms</a></li>
-			</ul>
-		    </li>
-		    <li>
-			About
-			<ul>
-			    <li><a href="">Why WAMUNC</a></li>
-			    <li><a href="">Meet the Secretariat</a></li>
-			    <li><a href="">IAS</a></li>
-			    <li><a href="">Charity</a></li>
-			    <li><a href="" style="padding-bottom: 10px;">Press Releases</a></li>
-			</ul>
-		    </li>
-	        </ul>
-	    </div>
-	</div>
-    </nav>
+
+	<nav>
+		<div class="mobile-header">
+			<div class="logo-mobile">
+				<a href="../../index.html">
+					<img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png" />
+				</a>
+			</div>
+			<div class="mobile-dropdown">
+				<label for="drop" class="toggle">&#9776;</label>
+				<input type="checkbox" id="drop" />
+			</div>
+		</div>
+
+		<div class="image-header">
+			<div class="logo" id="crest">
+				<a href="../../index.html">
+					<img src="https://s3.amazonaws.com/wamunc-website/wamunc-logos/wamunc-crest.png" />
+				</a>
+			</div>
+		</div>
+
+		<ul class="main-nav">
+			<li>
+				<a href="javascript:void(0)">Sponsorship</a>
+				<label for="drop-1" class="toggle">Sponsorship</label>
+				<input type="checkbox" id="drop-1"/>
+				<ul>
+					<li><a href="../../sponsorship/why.html" style="padding-top: 10px;">Why</a></li>
+					<li><a href="../../sponsorship/donations.html">Donations</a></li>
+					<li><a href="../../sponsorship/alumni.html">Alumni Relations</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Delegate Resources</a>
+				<label for="drop-2" class="toggle">Delegate Resources</label>
+				<input type="checkbox" id="drop-2"/>
+				<ul>
+					<li><a href="../../delegate/position-papers.html" style="padding-top: 10px;">Position Paper Resources</a></li>
+					<li><a href="../../delegate/crisis.html">Crisis How-To</a></li>
+					<li><a href="../../delegate/how-to-prepare.html">How to Prepare</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Committees</a>
+				<label for="drop-3" class="toggle">Committees</label>
+				<input type="checkbox" id="drop-3"/>
+				<ul>
+					<li><a href="../committees.html" style="padding-top: 10px;">Overview</a></li>
+					<li><a href="../committees.html#international">International Bodies</a></li>
+					<li><a href="../committees.html#regional">Regional Bodies and Councils</a></li>
+					<li><a href="../committees.html#historical">Historical and Specialized Bodies</a></li>
+					<li><a href="../committees.html#crisis" style="padding-bottom: 10px;">Crisis Committees</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">Conference</a>
+				<label for="drop-4" class="toggle">Conference</label>
+				<input type="checkbox" id="drop-4"/>
+				<ul>
+					<li><a href="../../conference/registration.html" style="padding-top: 10px;">Registration</a></li>
+					<li><a href="../../conference/financial.html">Financial Information</a></li>
+					<li><a href="../../conference/schedule.html">Conference Schedule</a></li>
+					<li><a href="../../conference/hotel.html">Hotel</a></li>
+					<li><a href="../../conference/programming.html">Programming</a></li>
+					<li><a href="../../conference/forms.html" style="padding-bottom: 10px;">Forms</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)">About</a>
+				<label for="drop-5" class="toggle">About</label>
+				<input type="checkbox" id="drop-5"/>
+				<ul>
+					<li><a href="../../about/why-wamunc.html" style="padding-top: 10px;">Why WAMUNC</a></li>
+					<li><a href="../../about/meet-the-secretariat.html">Meet the Secretariat</a></li>
+					<li><a href="../../about/ias.html">International Affairs Society</a></li>
+					<li><a href="../../about/charity.html">Charity</a></li>
+					<li><a href="../../about/press-releases.html" style="padding-bottom: 10px;">Press Releases</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
 
     <section class="pic-container">
-	<div class="page-title">
-	    <h1>Committee on Peaceful Uses of Space</h1>    
-	</div>
-    </section> 
-
-    <section class="container-fluid">
-	<div class="row committee-content">
-	    <p>"The Committee on the Peaceful uses of Space (COPUOS) governs the exploration and use of space for all United Nations member states. The two topics that delegates will focus on are defining �peaceful uses of space� and regulating military aggression in space. Topic A</p>
-	</div>
+		<div class="page-title">
+	    	<h2>Committee on Peaceful Uses of Space</h2>
+		</div>
     </section>
 
-    <footer class="container-fluid">
-	<div class="col-sm-8">
-	    <p id="copyright">&copy;WAMUNC XX</p>
-	</div>
-	<div class="col-sm-4">
-	<div class="social-media-icons">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/facebook.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/twitter.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/instagram.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/linked-in.png">
-	    <img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/youtube.png">
-	</div>
-	</div>
-    </footer>
+	<section class="container-fluid">
+		<div class="committee-content">
+			<p>The Committee on the Peaceful uses of Space (COPUOS) governs the exploration and use of space for all United Nations member states. The two topics that delegates will focus on are defining “peaceful uses of space” and regulating military aggression in space. Topic A, defining “peaceful uses of space” addresses the lack of clarity and a universal definition of peace in space. Currently, each member state establishes its own definition; however these definitions lack unity and cover a wide range of regulations and limitations. Topic B addresses how to regulate aggression in space, and more specifically delegates will establish detailed guidelines for the implementation and protection of new advancements in outer space in order to ensure the continuation of the international dedication to non-militarization and peace in space. By addressing these two topics, delegates will gain an understanding of the rising importance of space as a realm of both national defense and scientific exploration.</p>
+			<div class="bg">
+				<button class="bg-button" type="button">
+					<a class="bg-link" href="https://s3.amazonaws.com/wamunc-website/background-guides/COPUOS-bg.docx" target="_blank">Background Guide</a>
+				</button>
+			</div>
+			<div class="chair-info">
+				<div class="chair-pic-section">
+					<div class="chair-pic COPUOS"></div>
+					<div class="chair-info-brief">
+						<p>Allison Fish</p>
+						<p>afish@gwu.edu</p>
+					</div>
+				</div>
+				<div class="chair-bio">
+					<p>Welcome to WAMUNC XX! My name is Allison Fish and I am your chair for COPUOS. I am a senior in the Elliott School of International Affairs and will be graduating a year early with a major in International Affairs, concentration in Security Policy, and a double minor in Business Administration and History.</p>
+					<p>I have been involved in MUN since my sophomore year of high school when I founded my school’s MUN team and served as Head Delegate for three years. Some of the conferences my school attended were JHUMUNC and Hood College MUN. I got involved with WAMUNC my freshman year and have served as vice chair of UNICEF, and chair of Legal. I also served as the Secretary General for the Frederick County Regional MUN Conference in 2016 and 2017.</p>
+					<p>Outside of class and WAMUNC, I am a Resident Advisor and alumni of the GW Elizabeth J Somers Women’s Leadership Program. I am also currently working as the Associate Director at the Washington Homeland Security Roundtable, an organization that facilitates security discourse between government and large private-sector government contractors. This winter, I did a winter internship with Bryce Space and Technology and helped with policy writing for commercial space. In addition to this, I speak Spanish and some Italian (I studied abroad for two months this summer in Lecce, Italy- props if you know where this is).</p>
+					<p>You might be wondering why I chose to chair a seemingly absurd committee, and I would have been in the same boat a few years ago, but you will be surprised by how important space is in the balance of international security. I actually didn’t realize the importance of space until taking a Space in International Affairs class last year, and ever since I have been captivated. I am now in the process of pursuing a career in space policy.</p>
+					<p>This year, we will be focusing on peaceful uses of space and advanced military warfare in space. These two topics can be a bit difficult to research, especially if you are representing a smaller country. Don’t be discouraged. If you are having problems, think about your regional and global allies as well as the general importance of space in disaster relief, intelligence collection, navigation, communication, etc. We are not looking for you to be perfect, but we do want to see that you have knowledge of the topics and are able to suggest creative solutions.</p>
+					<p>I look forward to reading your position papers and meeting all of you in March. In the meantime, feel free to contact me if you have any questions or just want to reach out. We have an amazing dais, so get ready for a great time!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="container-fluid">
+		<div id="copyright">
+			<p>&copy;WAMUNC XX</p>
+		</div>
+		<div class="social-media-icons">
+			<div class="icon-container">
+				<a href="https://www.facebook.com/wamunc" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/facebook.png" />
+				</a>
+				<a href="https://twitter.com/wamunc" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/twitter.png" />
+				</a>
+				<a href="https://www.instagram.com/wamunc/" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/instagram.png" />
+				</a>
+				<a href="https://www.linkedin.com/company/washington-area-model-united-nations-conference-wamunc-" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/linked-in.png" />
+				</a>
+				<a href="https://www.youtube.com/channel/UCdF5FhNw2SDd6Jw_HVilZDw" target="_blank">
+					<img class="col-sm-2" src="https://s3.amazonaws.com/wamunc-website/social-media-icons/youtube.png" />
+				</a>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+        chairBios('chair-bio', 'chair-pic');
+        chairPics('chair-pic');
+
+        $('#drop').click(function() {
+            var checked = $('#drop').is(':checked');
+
+            if (checked) {
+                $('.main-nav')[0].style.display = 'block';
+            }
+            else {
+                $('.main-nav')[0].style.display = '';
+            }
+        });
+
+        $('input:not(:first)').each(function() {
+            $( this ).click(function () {
+                var checked = $(this).is(':checked');
+
+                if (checked) {
+                    $(this).prev().css({'background-color': 'rgba(39,64,139,0.7)'});
+                }
+                else {
+                    $(this).prev().css({'background-color': ''});
+                }
+            });
+        });
+
+        centerTitle();
+        window.addEventListener('resize', centerTitle);
+
+        centerIcons();
+        window.addEventListener('resize', centerIcons);
+	</script>
 </body>
 </html>

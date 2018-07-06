@@ -1,3 +1,8 @@
+.hotel {
+    background: url("hotel-2.jpg") 25% 25% no-repeat;
+    background-size: cover;
+}
+
 .prgm-map-container {
     padding: 0;
 }
@@ -7,6 +12,11 @@
     height: 800px;
     margin-bottom: 3em;
     margin-left: 10%;
+}
+
+.prgm-pic {
+    background: url("programming-background.jpg") 25% 25% no-repeat;
+    background-size: cover;
 }
 
 @media screen and (max-width: 1024px) {

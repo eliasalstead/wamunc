@@ -1,3 +1,18 @@
+.why {
+    background: url("why-wamunc-background.JPG") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.ias {
+    background: url("ias-background.jpg") 20% 20% no-repeat;
+    background-size: cover;
+}
+
+.pr-background {
+    background: url("pr-background.JPG") 30% 30% no-repeat;
+    background-size: cover;
+}
+
 .sec-gallery {
     font-size: 0;
     margin-top: 40px;
